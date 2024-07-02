@@ -1,0 +1,12 @@
+/* img-car {
+  transition-delay: 2s;
+} */
+
+img:hover {
+  opacity: 0.9;
+  transition: none;
+}
+
+.data-carousel:hover {
+  transition: none;
+}

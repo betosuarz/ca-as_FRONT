@@ -117,17 +117,17 @@
 
   <!-- Parallax effect -->
   <div
-    class="w-100 h-540 md:h-550 max-w-screen-xl overflow-y-scroll bg-cover bg-fixed bg-center bg-no-repeat shadow-lg mt-10"
+    class="main-div w-100 justify-center h-540 md:w-100 xl:w-100 md:h-550 overflow-y-scroll bg-cover bg-fixed bg-center bg-no-repeat shadow-lg mt-10 p-10 rounded-lg"
     style="background-image:url('../../../assets/home_carousel/CAÑAS\ INTERIOR-109.jpg');">
     <div class="mt-40">
-      <div class="bg-white p-4 sm:p-8">
-        <div class="font-inter text-2xl font-extrabold tracking-tight text-black">
+      <div class="bg-black bg-opacity-75 p-4 sm:p-10 sm:pt-10 rounded-2">
+        <div class=" font-inter text-2xl md:text-3xl lg:text-4xl font-extrabold tracking-tight text-white">
           Un lugar majestuoso
         </div>
-        <div class="mt-1 text-sm font-medium text-slate-500">
+        <div class="mt-1 text-sm md:text-xl lg:text-2xl font-bold text-slate-500 text-gray-300">
           El Monasterio de la Luz
         </div>
-        <p class="mt-4 leading-7 text-slate-500">
+        <p class=" mt-4 leading-7 text-slate-500 text-gray-300">
           El Monasterio de Cañas es un lugar donde la historia y la serenidad se entrelazan para ofrecer una experiencia
           única e
           inolvidable. Fundada en el siglo XII, esta abadía cisterciense es un testimonio viviente de la rica herencia
@@ -140,16 +140,18 @@
           escondida que
           espera ser descubierta por aquellos que buscan una conexión profunda con el pasado.
         </p>
-        <p class="mt-4 leading-7 text-slate-500">
+        <p class="mt-4 leading-7 text-slate-500 text-gray-300">
           Además de su valor histórico, el Monasterio de Cañas ofrece un ambiente de tranquilidad inigualable. Los
           jardines bien
           cuidados y los espacios interiores serenos brindan un refugio perfecto para quienes desean escapar del
           bullicio
           cotidiano y encontrar paz en medio de la belleza natural y arquitectónica. La atmósfera calmada y
           contemplativa del
-          monasterio permite a los visitantes sumergirse en una experiencia de introspección y renovación espiritual. En
+          monasterio permite a los visitantes sumergirse en una experiencia de introspección y renovación espiritual.
+          En
           el
-          Monasterio de Cañas, cada visita se convierte en una oportunidad para redescubrir la paz interior mientras se
+          Monasterio de Cañas, cada visita se convierte en una oportunidad para redescubrir la paz interior mientras
+          se
           explora un
           tesoro de historia y cultura.
         </p>
@@ -167,15 +169,14 @@
         ¿Por qué
         visitar esta Abadía?</h1>
       <p class="text-white px-5 md:px-20">Visitar el Monasterio
-        de Cañas es sumergirse en un oasis de paz y cultura medieval. Fundada en el siglo XII, esta abadía cisterciense
-        es un
-        testimonio vivo de la rica herencia espiritual y arquitectónica de la región. Sus majestuosos arcos góticos y
-        vitrales te transportan a otra época, mientras que sus tranquilos jardines ofrecen un refugio perfecto para la
-        reflexión. Este lugar no solo invita a explorar su historia y belleza arquitectónica, sino que también
-        proporciona una experiencia única de serenidad y conexión espiritual, ideal para aquellos en busca de paz y
-        enriquecimiento cultural..</p>
+        de Cañas es sumergirse en un oasis de paz y cultura medieval. Fundada en el siglo XII, esta abadía
+        cisterciense es un testimonio vivo de la rica herencia espiritual y arquitectónica de la región. Sus majestuosos
+        arcos góticos y vitrales te transportan a otra época, mientras que sus tranquilos jardines ofrecen un refugio
+        perfecto para la reflexión. Este lugar no solo invita a explorar su historia y belleza arquitectónica, sino que
+        también proporciona una experiencia única de serenidad y conexión espiritual, ideal para aquellos en busca de
+        paz y enriquecimiento cultural..</p>
       <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 mt-10">
-        <a href="#"
+        <a [routerLink]="['/visitas']"
           class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
           Descúbrenos
           <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
@@ -184,7 +185,7 @@
               d="M1 5h12m0 0L9 1m4 4L9 9" />
           </svg>
         </a>
-        <a href="#"
+        <a [routerLink]="['/faq']"
           class="inline-flex justify-center hover:text-gray-900 items-center py-3 px-5 sm:ms-4 text-base font-medium text-center text-white rounded-lg border border-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-400">
           Preguntas frecuentes
         </a>

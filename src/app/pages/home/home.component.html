@@ -54,18 +54,152 @@
 
   </div>
 
+
   <!-- Sección de títulos -->
-  <div class="title-text text-center mt-5">
+  <h1 class="text-3xl sm:text-4xl md:text-5xl mt-10 md:mt-15 font-extrabold text-gray-500 dark:text-white text-center">
+    <small class="ms-2 font-semibold text-gray-900 dark:text-gray-400">Monasterio de Santa María</small>
+    <br>de San Salvador
+  </h1>
+  <h3 class="text-xl sm:text-2xl md:text-3xl mt-2 md:mt-15 font-semibold text-gray-700 dark:text-white text-center">
+    de
+    Cañas</h3>
+
+
+  <!-- Sección de títulos -->
+  <!-- <div class="title-text text-center mt-5">
     <h2 class="text-lg sm:text-2xl pt-2 font-medium text-gray-600 dark:text-white">Monasterio</h2>
     <h2 class="text-2xl sm:text-3xl sm:pt-1 font-semibold">de Santa María de San Salvador</h2>
     <h3 class="text-base sm:text-xl sm:pt-1 font-medium text-gray-500 dark:text-white">de Cañas</h3>
-  </div>
+  </div> -->
 
-  <div class="mt-5 bg-black">
+  <!-- <div class="mt-5 bg-black">
     <video class="w-full" autoplay controls>
       <source src="../../../assets/video/Monasterio de Cañas VER.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
+  </div> -->
+
+  <!-- Sección de vídeo y formato texto -->
+  <section class="bg-white dark:bg-gray-900 mt-5">
+    <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 grid lg:grid-cols-2 gap-8 lg:gap-16">
+      <div class="flex flex-col justify-center">
+        <h2
+          class="mb-4 text-2xl sm:text-4xl lg:text-4xl font-extrabold tracking-tight leading-none text-gray-900 dark:text-white">
+          Visita el Monasterio de la luz</h2>
+        <p class="mb-8 text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400">Descubre la serenidad y el
+          encanto histórico del Monasterio de Cañas: una joya escondida que te transportará en el
+          tiempo, ofreciendo una experiencia inolvidable llena de istoria y belleza.</p>
+        <div class="flex flex-col space-y-4 sm:flex-row sm:space-y-0">
+          <a [routerLink]="['/visits']"
+            class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
+            Visitas
+            <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+              fill="none" viewBox="0 0 14 10">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M1 5h12m0 0L9 1m4 4L9 9" />
+            </svg>
+          </a>
+          <button [routerLink]="['/contact']"
+            class="py-3 px-5 sm:ms-4 text-sm font-semibold text-gray-700 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-900 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">
+            Contacto
+          </button>
+        </div>
+      </div>
+      <div>
+        <iframe class="mx-auto w-full lg:max-w-xl h-64 rounded-lg sm:h-96"
+          src="../../../assets/video/Monasterio de Cañas VER.mp4" title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Parallax effect -->
+  <div
+    class="w-100 h-540 md:h-550 max-w-screen-xl overflow-y-scroll bg-cover bg-fixed bg-center bg-no-repeat shadow-lg mt-10"
+    style="background-image:url('../../../assets/home_carousel/CAÑAS\ INTERIOR-109.jpg');">
+    <div class="mt-40">
+      <div class="bg-white p-4 sm:p-8">
+        <div class="font-inter text-2xl font-extrabold tracking-tight text-black">
+          Un lugar majestuoso
+        </div>
+        <div class="mt-1 text-sm font-medium text-slate-500">
+          El Monasterio de la Luz
+        </div>
+        <p class="mt-4 leading-7 text-slate-500">
+          El Monasterio de Cañas es un lugar donde la historia y la serenidad se entrelazan para ofrecer una experiencia
+          única e
+          inolvidable. Fundada en el siglo XII, esta abadía cisterciense es un testimonio viviente de la rica herencia
+          cultural y
+          espiritual de la región. Sus muros centenarios resguardan historias de fe, dedicación y resiliencia, mientras
+          que su
+          arquitectura gótica, con elegantes arcos y vitrales, invita a los visitantes a un viaje en el tiempo. Cada
+          rincón del
+          monasterio refleja la devoción y el esmero con el que fue construido, haciendo de este lugar una joya
+          escondida que
+          espera ser descubierta por aquellos que buscan una conexión profunda con el pasado.
+        </p>
+        <p class="mt-4 leading-7 text-slate-500">
+          Además de su valor histórico, el Monasterio de Cañas ofrece un ambiente de tranquilidad inigualable. Los
+          jardines bien
+          cuidados y los espacios interiores serenos brindan un refugio perfecto para quienes desean escapar del
+          bullicio
+          cotidiano y encontrar paz en medio de la belleza natural y arquitectónica. La atmósfera calmada y
+          contemplativa del
+          monasterio permite a los visitantes sumergirse en una experiencia de introspección y renovación espiritual. En
+          el
+          Monasterio de Cañas, cada visita se convierte en una oportunidad para redescubrir la paz interior mientras se
+          explora un
+          tesoro de historia y cultura.
+        </p>
+      </div>
+    </div>
   </div>
+
+
+  <!-- Sección de contacto -->
+  <section
+    class="bg-center bg-no-repeat bg-[url('../../../src\assets\home_carousel\CAÑAS 19 MAYO-21.jpg')] bg-gray-700 bg-blend-multiply mt-10">
+    <div class="px-4 mx-auto max-w-screen-xl text-center py-20 lg:py-45">
+      <h1
+        class="text-2xl sm:text-2xl md:text-3xl mt-2 md:mt-15 font-semibold text-gray-700 dark:text-white text-center mb-3 font-extrabold tracking-tight leading-none text-white md:text-3xl lg:text-4xl">
+        ¿Por qué
+        visitar esta Abadía?</h1>
+      <p class="text-white px-5 md:px-20">Visitar el Monasterio
+        de Cañas es sumergirse en un oasis de paz y cultura medieval. Fundada en el siglo XII, esta abadía cisterciense
+        es un
+        testimonio vivo de la rica herencia espiritual y arquitectónica de la región. Sus majestuosos arcos góticos y
+        vitrales te transportan a otra época, mientras que sus tranquilos jardines ofrecen un refugio perfecto para la
+        reflexión. Este lugar no solo invita a explorar su historia y belleza arquitectónica, sino que también
+        proporciona una experiencia única de serenidad y conexión espiritual, ideal para aquellos en busca de paz y
+        enriquecimiento cultural..</p>
+      <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 mt-10">
+        <a href="#"
+          class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
+          Descúbrenos
+          <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+            viewBox="0 0 14 10">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M1 5h12m0 0L9 1m4 4L9 9" />
+          </svg>
+        </a>
+        <a href="#"
+          class="inline-flex justify-center hover:text-gray-900 items-center py-3 px-5 sm:ms-4 text-base font-medium text-center text-white rounded-lg border border-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-400">
+          Preguntas frecuentes
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
 
 </div>

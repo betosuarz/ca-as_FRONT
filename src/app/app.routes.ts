@@ -7,6 +7,12 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { ScheduleComponent } from './pages/schedule/schedule.component';
 import { GalleryComponent } from './pages/gallery/gallery.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
+import { PrivacyPolicyComponent } from './pages/privacy-policy/privacy-policy.component';
+import { CookiesPolicyComponent } from './pages/cookies-policy/cookies-policy.component';
+import { TermsConditionsComponent } from './pages/terms-conditions/terms-conditions.component';
+import { LegalNoticeComponent } from './pages/legal-notice/legal-notice.component';
+import { ReturnPolicyComponent } from './pages/return-policy/return-policy.component';
+import { FaqComponent } from './pages/faq/faq.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -20,6 +26,12 @@ export const routes: Routes = [
   { path: 'news', component: NewsComponent },
   { path: 'gallery', component: GalleryComponent },
   { path: 'contact', component: ContactComponent },
+  { path: 'privacy-policy', component: PrivacyPolicyComponent },
+  { path: 'cookies-policy', component: CookiesPolicyComponent },
+  { path: 'terms-conditions', component: TermsConditionsComponent },
+  { path: 'return-policy', component: ReturnPolicyComponent },
+  { path: 'legal-notice', component: LegalNoticeComponent },
+  { path: 'faq', component: FaqComponent },
   // { path: '**', redirectTo: 'home' },
   { path: '**', component: NotFoundComponent },
 ];

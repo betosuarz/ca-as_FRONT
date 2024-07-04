@@ -1,0 +1,11 @@
+.skeleton {
+  margin-top: 150px;
+}
+
+[data-carousel="stop"] .img-car {
+  animation-play-state: paused;
+}
+
+[data-carousel="slide"] .img-car {
+  animation-play-state: running;
+}

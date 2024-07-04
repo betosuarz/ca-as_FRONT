@@ -17,12 +17,15 @@ import { FaqComponent } from './pages/faq/faq.component';
 export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
-  {
-    path: 'abbey', component: AbbeyComponent, children: [
-      { path: 'schedule', component: ScheduleComponent },
-      { path: 'rates', component: RatesComponent },
-    ],
-  },
+  // {
+  //   path: 'abbey', component: AbbeyComponent, children: [
+  //     { path: 'schedule', component: ScheduleComponent },
+  //     { path: 'rates', component: RatesComponent },
+  //   ],
+  // },
+  { path: 'abbey', component: AbbeyComponent },
+  { path: 'schedule', component: ScheduleComponent },
+  { path: 'rates', component: RatesComponent },
   { path: 'news', component: NewsComponent },
   { path: 'gallery', component: GalleryComponent },
   { path: 'contact', component: ContactComponent },

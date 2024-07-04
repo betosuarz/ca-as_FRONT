@@ -1,1 +1,77 @@
-<p>contact works!</p>
+<div class="sm:ml-64">
+  <h2 class="form-title mt-10 text-xl md:text-2xl lg:text-3xl font-bold text-center">Formulario de contacto</h2>
+  <form class="max-w-md mx-auto mt-10 md:mt-15 px-10">
+
+    <div class="grid md:grid-cols-2 md:gap-6">
+
+      <div class="relative z-0 w-full mb-5 group">
+        <input type="text" name="floating_first_name" id="floating_first_name"
+          class="block pt-2 pb-1 md:py-2  px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+          placeholder=" " required />
+        <label for="floating_first_name"
+          class="peer-focus:font-medium absolute text-xs text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-2 h-30 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 whitespace-normal break-words w-full">Nombre
+          completo</label>
+      </div>
+      <div class="relative z-0 w-full mb-5 group">
+        <input type="text" name="floating_last_name" id="floating_last_name"
+          class="block pt-2 pb-1 md:py-2  px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+          placeholder=" " required />
+        <label for="floating_last_name"
+          class="peer-focus:font-medium absolute text-xs text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-2 h-30 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 whitespace-normal break-words w-full">Apellidos
+          completos</label>
+      </div>
+    </div>
+
+    <div class="relative z-0 w-full mb-5 group">
+      <input type="email" name="floating_email" id="floating_email"
+        class="block pt-2 pb-1 md:py-2  px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+        placeholder=" " required />
+      <label for="floating_email"
+        class="peer-focus:font-medium absolute text-xs text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-2 h-30 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 whitespace-normal break-words w-full">Correo
+        electrónico</label>
+    </div>
+
+    <div class="grid md:grid-cols-2 md:gap-6">
+      <div class="relative z-0 w-full mb-5 group">
+        <input type="tel" pattern="[0-9]{9}" name="floating_phone" id="floating_phone"
+          class="block pt-2 pb-1 md:py-2  px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+          placeholder=" " required />
+        <label for="floating_phone"
+          class="peer-focus:font-medium absolute text-xs text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-2 h-30 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 whitespace-normal break-words w-full">Teléfono</label>
+      </div>
+
+      <div class="relative z-0 w-full mb-5 group">
+        <!-- Datepicker -->
+        <input id="datepicker-format" datepicker datepicker-autohide datepicker-format="mm-dd-yyyy" type="text"
+          class="block pt-2 pb-1 md:py-2 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+          placeholder=" " />
+        <label for="datepicker-format"
+          class="peer-focus:font-medium absolute text-xs text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-2 h-30 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 whitespace-normal break-words w-full">Fecha
+          de visita</label>
+      </div>
+
+    </div>
+
+    <form class="mx-auto">
+      <label for="message" class="block mb-2 text-xs font-medium text-gray-600 dark:text-white">Comentarios
+        adicionales</label>
+      <textarea id="message" rows="4"
+        class="block h-20 p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+        placeholder="Escribe tu comentario..."></textarea>
+    </form>
+
+
+    <fieldset>
+      <div class="flex items-center mb-4 mt-3">
+        <input checked id="checkbox-1" type="checkbox" value=""
+          class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+        <label for="checkbox-1" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Estoy de acuerdo con
+          los <a href="/terms-conditions" class="text-blue-600 hover:underline dark:text-blue-500">términos y
+            condiciones</a>.</label>
+      </div>
+    </fieldset>
+
+    <button type="submit"
+      class="text-white mt-5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
+  </form>
+</div>

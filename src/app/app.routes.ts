@@ -14,15 +14,16 @@ import { LegalNoticeComponent } from './pages/legal-notice/legal-notice.componen
 import { ReturnPolicyComponent } from './pages/return-policy/return-policy.component';
 import { FaqComponent } from './pages/faq/faq.component';
 import { VisitsComponent } from './pages/visits/visits.component';
+import { CurrentsComponent } from './pages/currents/currents.component';
+import { HistoryComponent } from './pages/history/history.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   {
     path: 'abbey', component: AbbeyComponent, children: [
-      { path: 'history', component: ScheduleComponent },
-      { path: 'currents', component: RatesComponent },
-
+      { path: 'history', component: HistoryComponent },
+      { path: 'currents', component: CurrentsComponent },
     ],
   },
   {
@@ -31,8 +32,7 @@ export const routes: Routes = [
       { path: 'rates', component: RatesComponent },
     ],
   },
-  
-  
+
   { path: 'news', component: NewsComponent },
   { path: 'gallery', component: GalleryComponent },
   { path: 'contact', component: ContactComponent },

@@ -13,19 +13,26 @@ import { TermsConditionsComponent } from './pages/terms-conditions/terms-conditi
 import { LegalNoticeComponent } from './pages/legal-notice/legal-notice.component';
 import { ReturnPolicyComponent } from './pages/return-policy/return-policy.component';
 import { FaqComponent } from './pages/faq/faq.component';
+import { VisitsComponent } from './pages/visits/visits.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
-  // {
-  //   path: 'abbey', component: AbbeyComponent, children: [
-  //     { path: 'schedule', component: ScheduleComponent },
-  //     { path: 'rates', component: RatesComponent },
-  //   ],
-  // },
-  { path: 'abbey', component: AbbeyComponent },
-  { path: 'schedule', component: ScheduleComponent },
-  { path: 'rates', component: RatesComponent },
+  {
+    path: 'abbey', component: AbbeyComponent, children: [
+      { path: 'history', component: ScheduleComponent },
+      { path: 'currents', component: RatesComponent },
+
+    ],
+  },
+  {
+    path: 'visits', component: VisitsComponent, children: [
+      { path: 'schedule', component: ScheduleComponent },
+      { path: 'rates', component: RatesComponent },
+    ],
+  },
+  
+  
   { path: 'news', component: NewsComponent },
   { path: 'gallery', component: GalleryComponent },
   { path: 'contact', component: ContactComponent },

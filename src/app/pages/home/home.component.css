@@ -6,3 +6,12 @@
   background-color: rgba(0, 0, 0, 0.3);
   /* Añade un fondo oscuro semitransparente */
 }
+
+.data-carousel:hover {
+  transition: none;
+}
+
+.title-text {
+  z-index: 100;
+  text-decoration: wavy;
+}

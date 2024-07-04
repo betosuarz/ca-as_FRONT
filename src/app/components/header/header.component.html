@@ -1,11 +1,14 @@
-<nav class="fixed top-0 z-50 w-full bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700">
+<!-- BARRA SUPERIOR FIJA -->
+<nav class="z-50 fixed w-full bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700">
   <div class="px-3 py-3 lg:px-5 lg:pl-3">
     <div class="flex items-center justify-between">
       <div class="flex items-center justify-start rtl:justify-end z-200">
-        <button data-drawer-target="logo-sidebar" data-drawer-toggle="logo-sidebar" aria-controls="logo-sidebar"
-          type="button"
-          class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
-          <span class="sr-only">Open sidebar</span>
+
+        <!-- drawer init and show -->
+        <button
+          class="z-150 text-gray-500 hover:text-gray-900 hover:bg-gray-100 focus:ring-2 focus:ring-gray-300 font-bold rounded-lg text-sm px-3 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+          type="button" data-drawer-target="drawer-navigation" data-drawer-show="drawer-navigation"
+          aria-controls="drawer-navigation">
           <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
             xmlns="http://www.w3.org/2000/svg">
             <path clip-rule="evenodd" fill-rule="evenodd"
@@ -13,7 +16,7 @@
             </path>
           </svg>
         </button>
-        <a [routerLink]="['/home']" class="flex ms-2 md:me-24">
+        <a [routerLink]="['/home']" class="flex mx-2 md:me-24">
           <img src="../../../assets/img_logo/Logotipo Cañas Luz NEGRO LARGO WEB.png" class="h-8 me-3"
             alt="Cañas Logo" />
           <span class="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap dark:text-white"></span>
@@ -35,13 +38,6 @@
           <div
             class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded shadow dark:bg-gray-700 dark:divide-gray-600"
             id="dropdown-user">
-            <!-- <div class="px-4 py-3" role="none">
-              <p class="text-sm text-gray-900 dark:text-white" role="none">
-                Políticas
-              </p>
-              <p class="text-sm font-medium text-gray-900 truncate dark:text-gray-300" role="none">
-              </p>
-            </div> -->
             <ul class="py-1" role="none">
               <li>
                 <a [routerLink]="['/privacy-policy']"
@@ -82,13 +78,29 @@
   </div>
 </nav>
 
-<aside id="logo-sidebar"
-  class="fixed top-0 left-0 z-40 w-64 h-screen pt-20 transition-transform -translate-x-full bg-white border-r border-gray-200 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700"
-  aria-label="Sidebar">
-  <div class="h-full px-3 pb-4 overflow-y-auto bg-white dark:bg-gray-800">
-    <h5 id="drawer-navigation-label" class="text-base font-semibold text-xs text-gray-500 uppercase dark:text-gray-400">
-      Menu
-    </h5>
+
+<!-- BARRA LATEAL FLOTANTE -->
+
+<!-- drawer component -->
+<div id="drawer-navigation"
+  class="drawer-navigation fixed left-0 z-40 w-64 h-screen p-4 overflow-y-auto transition-transform -translate-x-full bg-white dark:bg-gray-800"
+  tabindex="-1" aria-labelledby="drawer-navigation-label">
+  <h5 id="drawer-navigation-label" class="text-base font-semibold text-xs text-gray-500 uppercase dark:text-gray-400">
+    Menu</h5>
+
+  <!-- Botón cerrar menú flotante -->
+  <button type="button" data-drawer-hide="drawer-navigation" aria-controls="drawer-navigation"
+    class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 absolute top-2.5 end-2.5 inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white">
+    <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd"
+        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+        clip-rule="evenodd"></path>
+    </svg>
+    <span class="sr-only">Close menu</span>
+  </button>
+
+
+  <div class="py-4 overflow-y-auto">
     <ul class="space-y-0 font-medium pt-2">
       <li>
         <button type="button" [routerLink]="['/home']"
@@ -216,7 +228,7 @@
 
           <span class="flex-1 ms-3 whitespace-nowrap">Noticias</span>
           <!-- <span
-            class="inline-flex items-center justify-center px-2 ms-3 text-sm font-medium text-gray-800 bg-gray-100 rounded-full dark:bg-gray-700 dark:text-gray-300">Pro</span> -->
+                class="inline-flex items-center justify-center px-2 ms-3 text-sm font-medium text-gray-800 bg-gray-100 rounded-full dark:bg-gray-700 dark:text-gray-300">Pro</span> -->
         </button>
       </li>
 
@@ -347,131 +359,4 @@
       </p>
     </div>
   </div>
-
-</aside>
-
-<!-- <div class=" p-4 sm:ml-64">
-  <div class="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 mt-14">
-    <div class="grid grid-cols-3 gap-4 mb-4">
-      <div class="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800">
-        <p class="text-2xl text-gray-400 dark:text-gray-500">
-          <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-            viewBox="0 0 18 18">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M9 1v16M1 9h16" />
-          </svg>
-        </p>
-      </div>
-      <div class="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800">
-        <p class="text-2xl text-gray-400 dark:text-gray-500">
-          <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-            viewBox="0 0 18 18">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M9 1v16M1 9h16" />
-          </svg>
-        </p>
-      </div>
-      <div class="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800">
-        <p class="text-2xl text-gray-400 dark:text-gray-500">
-          <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-            viewBox="0 0 18 18">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M9 1v16M1 9h16" />
-          </svg>
-        </p>
-      </div>
-    </div>
-    <div class="flex items-center justify-center h-48 mb-4 rounded bg-gray-50 dark:bg-gray-800">
-      <p class="text-2xl text-gray-400 dark:text-gray-500">
-        <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
-          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-            d="M9 1v16M1 9h16" />
-        </svg>
-      </p>
-    </div>
-    <div class="grid grid-cols-2 gap-4 mb-4">
-      <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
-        <p class="text-2xl text-gray-400 dark:text-gray-500">
-          <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-            viewBox="0 0 18 18">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M9 1v16M1 9h16" />
-          </svg>
-        </p>
-      </div>
-      <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
-        <p class="text-2xl text-gray-400 dark:text-gray-500">
-          <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-            viewBox="0 0 18 18">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M9 1v16M1 9h16" />
-          </svg>
-        </p>
-      </div>
-      <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
-        <p class="text-2xl text-gray-400 dark:text-gray-500">
-          <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-            viewBox="0 0 18 18">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M9 1v16M1 9h16" />
-          </svg>
-        </p>
-      </div>
-      <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
-        <p class="text-2xl text-gray-400 dark:text-gray-500">
-          <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-            viewBox="0 0 18 18">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M9 1v16M1 9h16" />
-          </svg>
-        </p>
-      </div>
-    </div>
-    <div class="flex items-center justify-center h-48 mb-4 rounded bg-gray-50 dark:bg-gray-800">
-      <p class="text-2xl text-gray-400 dark:text-gray-500">
-        <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
-          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-            d="M9 1v16M1 9h16" />
-        </svg>
-      </p>
-    </div>
-    <div class="grid grid-cols-2 gap-4">
-      <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
-        <p class="text-2xl text-gray-400 dark:text-gray-500">
-          <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-            viewBox="0 0 18 18">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M9 1v16M1 9h16" />
-          </svg>
-        </p>
-      </div>
-      <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
-        <p class="text-2xl text-gray-400 dark:text-gray-500">
-          <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-            viewBox="0 0 18 18">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M9 1v16M1 9h16" />
-          </svg>
-        </p>
-      </div>
-      <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
-        <p class="text-2xl text-gray-400 dark:text-gray-500">
-          <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-            viewBox="0 0 18 18">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M9 1v16M1 9h16" />
-          </svg>
-        </p>
-      </div>
-      <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
-        <p class="text-2xl text-gray-400 dark:text-gray-500">
-          <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-            viewBox="0 0 18 18">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M9 1v16M1 9h16" />
-          </svg>
-        </p>
-      </div>
-    </div>
-  </div>
-</div> -->
+</div>

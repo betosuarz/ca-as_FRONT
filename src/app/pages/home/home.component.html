@@ -2,40 +2,40 @@
   <div class="border-2 border-gray-200 rounded-lg dark:border-gray-700 md:h-screen ">
     <div class="grid grid-cols-1">
       <div id="default-carousel" class="relative w-full" data-carousel="slide">
-        <!-- Carousel wrapper -->
-        <div
-          class="bg-black relative h-80 overflow-hidden rounded-lg md:h-screen m-0 p-0 hover:scale-105 hover:ease-in shadow-lg">
-          <!-- Item 1 -->
-          <div class="hidden duration-1000 ease-in-out hover:ease-in" data-carousel-item>
-            <img src="../../../assets/home_carousel/CAÑAS EXTERIOR-37.jpg"
-              class="img-car absolute block w-full h-full object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-              alt="...">
-          </div>
-          <!-- Item 2 -->
-          <div class="hidden duration-1000 ease-in-out hover:ease-in" data-carousel-item>
-            <img src="../../../assets/home_carousel/CAÑAS INTERIOR-109.jpg"
-              class="img-car absolute block w-full h-full object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-              alt="...">
-          </div>
-          <!-- Item 3 -->
-          <div class="hidden duration-1000 ease-in-out hover:ease-in" data-carousel-item>
-            <img src="../../../assets/home_carousel/MUSEO CAÑAS 2-31.jpg"
-              class="img-car absolute block w-full h-full object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-              alt="...">
-          </div>
-          <!-- Item 4 -->
-          <div class="hidden duration-1000 ease-in-out hover:ease-in" data-carousel-item>
-            <img src="../../../assets/home_carousel/SEPULCRO-1.jpg"
-              class="img-car absolute block w-full h-full object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-              alt="...">
-          </div>
-          <!-- Item 5 -->
-          <div class="hidden duration-1000 ease-in-out hover:ease-in" data-carousel-item>
-            <img src="../../../assets/home_carousel/CAÑAS EXTERIOR-19.jpg"
-              class="img-car absolute block w-full h-full object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-              alt="...">
-          </div>
-        </div>
+  <!-- Carousel wrapper -->
+  <div
+    class="bg-black relative h-80 overflow-hidden rounded-lg md:h-screen m-0 p-0 hover:scale-105 hover:ease-in shadow-lg">
+    <!-- Item 1 -->
+    <div class="hidden duration-1000 ease-in-out hover:ease-in" data-carousel-item>
+      <img src="../../../assets/home_carousel/CAÑAS EXTERIOR-37.jpg"
+        class="img-car absolute block w-full h-full object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+        alt="...">
+    </div>
+    <!-- Item 2 -->
+    <div class="hidden duration-1000 ease-in-out hover:ease-in" data-carousel-item>
+      <img src="../../../assets/home_carousel/CAÑAS INTERIOR-109.jpg"
+        class="img-car absolute block w-full h-full object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+        alt="...">
+    </div>
+    <!-- Item 3 -->
+    <div class="hidden duration-1000 ease-in-out hover:ease-in" data-carousel-item>
+      <img src="../../../assets/home_carousel/MUSEO CAÑAS 2-31.jpg"
+        class="img-car absolute block w-full h-full object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+        alt="...">
+    </div>
+    <!-- Item 4 -->
+    <div class="hidden duration-1000 ease-in-out hover:ease-in" data-carousel-item>
+      <img src="../../../assets/home_carousel/SEPULCRO-1.jpg"
+        class="img-car absolute block w-full h-full object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+        alt="...">
+    </div>
+    <!-- Item 5 -->
+    <div class="hidden duration-1000 ease-in-out hover:ease-in" data-carousel-item>
+      <img src="../../../assets/home_carousel/CAÑAS EXTERIOR-19.jpg"
+        class="img-car absolute block w-full h-full object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+        alt="...">
+    </div>
+  </div>
         <!-- Slider indicators -->
         <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
           <button type="button" class="w-2 h-2 rounded-full" aria-current="true" aria-label="Slide 1"
@@ -89,18 +89,18 @@
           encanto histórico del Monasterio de Cañas: una joya escondida que te transportará en el
           tiempo, ofreciendo una experiencia inolvidable llena de istoria y belleza.</p>
         <div class="flex flex-col space-y-4 sm:flex-row sm:space-y-0">
-          <a [routerLink]="['/visits']"
+          <a [routerLink]="['/visits', 'schedule']"
             class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
-            Visitas
+            Horarios
             <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
               fill="none" viewBox="0 0 14 10">
               <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                 d="M1 5h12m0 0L9 1m4 4L9 9" />
             </svg>
           </a>
-          <button [routerLink]="['/contact']"
+          <button [routerLink]="['/visits', 'rates']"
             class="py-3 px-5 sm:ms-4 text-sm font-semibold text-gray-700 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-900 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">
-            Contacto
+            Tarifas
           </button>
         </div>
       </div>

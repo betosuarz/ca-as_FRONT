@@ -5,5 +5,50 @@
 } */
 
 .drawer-navigation {
-  margin-top: 69px;
+  padding-top: 69px;
+}
+
+.unified-button {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+  /* Ensure the link styles do not affect the container */
+}
+
+.unified-button .button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.unified-button .icon {
+  width: 24px;
+  height: 24px;
+}
+
+.unified-button .logo-link {
+  display: flex;
+  align-items: center;
+  margin-left: 8px;
+  /* Adjust spacing as needed */
+}
+
+.unified-button .logo {
+  height: 32px;
+}
+
+.unified-button:hover .button,
+.unified-button:hover .logo {
+  filter: brightness(1.1);
+  /* Apply hover effect to both elements */
+}
+
+.unified-button:active .button,
+.unified-button:active .logo {
+  filter: brightness(0.9);
+  /* Apply active effect to both elements */
 }

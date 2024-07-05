@@ -2,6 +2,9 @@
   <app-header></app-header>
 </header>
 <main>
+  @if(!isTargetPage()){
+    <app-floating-tab></app-floating-tab>
+  }
   <router-outlet />
 </main>
 <footer>

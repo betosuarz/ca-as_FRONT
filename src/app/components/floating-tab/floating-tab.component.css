@@ -1,0 +1,12 @@
+.floating-tab {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    background-color: #800000;
+    color: white;
+    padding: 10px;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    cursor: pointer;
+  }
+  

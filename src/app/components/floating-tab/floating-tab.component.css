@@ -9,4 +9,9 @@
     text-orientation: mixed;
     cursor: pointer;
   }
-  
+
+  @media (max-width: 480px) {
+    .floating-tab {
+        padding: 10px 0;
+    }
+  }

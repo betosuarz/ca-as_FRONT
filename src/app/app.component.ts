@@ -14,12 +14,11 @@ import { FloatingTabComponent } from './components/floating-tab/floating-tab.com
 })
 export class AppComponent {
   title = 'canas_FRONT';
+  constructor(private router: Router) {}
 
   ngOnInit(): void {
     initFlowbite();
   }
-
-  constructor(private router: Router) {}
 
   isTargetPage(): boolean {
     return this.router.url === '/faq';

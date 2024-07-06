@@ -1,125 +1,227 @@
 .carousel-container {
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    background-color: #000;
-    color: #fff;
-  }
-  
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: #000;
+  color: #fff;
+  transition: opacity 0.5s ease-in-out;
+}
+
+
+.carousel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.carousel-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+  opacity: 0;
+  transform: scale(1.05);
+}
+
+.carousel-image.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.carousel-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.thumbnails {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.thumbnails img {
+  width: 50px;
+  height: 50px;
+  margin: 0 5px;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.thumbnails img:hover {
+  transform: scale(1.4);
+  opacity: 1;
+}
+
+.thumbnails img:not(:hover) {
+  transform: scale(1.1);
+}
+
+.thumbnails:hover img {
+  transform: scale(1.1);
+}
+
+.thumbnails:hover img:hover {
+  transform: scale(1.4);
+}
+
+
+
+.navigation {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1em;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+/*X button*/
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 20px;
+  height: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.close-btn:before,
+.close-btn:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.close-btn:before {
+  transform: rotate(45deg);
+}
+
+.close-btn:after {
+  transform: rotate(-45deg);
+}
+
+.close-btn:hover {
+  color: #D2B48C;
+  transform: scale(1.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.close-btn:hover:before,
+.close-btn:hover:after {
+  background-color: #D2B48C;
+}
+
+.close-btn:hover:before {
+  transform: rotate(90deg);
+}
+
+.close-btn:hover:after {
+  transform: rotate(0deg);
+}
+/*-----*/
+
+.nav-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2em;
+  cursor: pointer;
+  z-index: 10;
+  transition: transform 0.3s ease;
+}
+
+.nav-arrow svg {
+  width: 30px;
+  height: 30px;
+}
+
+.nav-arrow:hover {
+  transform: translateY(-50%) scale(1.2);
+}
+
+.left-arrow {
+  left: 20px;
+}
+
+.right-arrow {
+  right: 20px;
+}
+
+/* @media (max-width: 768px) {
   .carousel {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
+    height: 60vh;
   }
-  
-  .carousel-image {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
-    opacity: 0;
-    transform: scale(1.05);
+  .thumbnails img {
+    width: 40px;
+    height: 40px;
   }
-  
-  .carousel-image.active {
-    opacity: 1;
-    transform: scale(1);
+} */
+@media (max-width: 768px) and (orientation: portrait) {
+  .carousel-container {
+    width: 100vh;
+    height: 100vw;
+    transform: rotate(90deg);
+    transform-origin: center center;
+    overflow: auto;
   }
-  
+
   .carousel-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    object-fit: contain;
   }
-  
+
   .thumbnails {
     position: absolute;
     bottom: 20px;
-    right: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    left: 50%;
+    transform: translateX(-50%) rotate(-90deg);
   }
-  
-  .thumbnails img {
-    width: 50px;
-    height: 50px;
-    margin: 0 5px;
-    cursor: pointer;
-    opacity: 0.6;
-    transition: opacity 0.3s;
-  }
-  
-  .thumbnails img.selected {
-    opacity: 1;
-  }
-  
+
   .navigation {
     position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1em;
-    color: #fff;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 5px 10px;
-    border-radius: 5px;
-  }
-  
-  
-  .close-btn {
-    position: absolute;
-    top: 10px;
     right: 10px;
-    background: none;
-    border: none;
-    color: #fff;
-    font-size: 1.5em;
-    cursor: pointer;
-  }
-  
-  .nav-arrow {
-    position: absolute;
     top: 50%;
-    transform: translateY(-50%);
-    background: none;
-    border: none;
-    color: #fff;
-    font-size: 2em;
-    cursor: pointer;
-    z-index: 10;
+    transform: translateY(-50%) rotate(-90deg);
   }
-  
-  .left-arrow {
-    left: 20px;
-  }
-  
-  .right-arrow {
+
+  .close-btn {
+    top: auto;
+    bottom: 20px;
     right: 20px;
+    transform: rotate(-90deg);
   }
-  
-  @media (max-width: 768px) {
-    .carousel {
-      height: 60vh;
-    }
-    .thumbnails img {
-      width: 40px;
-      height: 40px;
-    }
-  }
-  
+}

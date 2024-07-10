@@ -10,7 +10,7 @@ import { gsap } from 'gsap';
   templateUrl: './image-slider.component.html',
   styleUrls: ['./image-slider.component.css']
 })
-export class ImageSliderComponent implements OnInit, AfterViewInit {
+export class ImageSliderComponent{
   slides = [
     { image: 'assets/gallery/sepulcro/SEPULCRO-1-scaled.jpg' },
     { image: 'assets/gallery/sepulcro/SEPULCRO-2-scaled.jpg' },
@@ -20,66 +20,66 @@ export class ImageSliderComponent implements OnInit, AfterViewInit {
   currentIndex = 0;
   showCarousel = true;
   isLandscape = false;
+  //autoplay
+  autoplayInterval: any;
+  autoplayEnabled = false;
 
-
-  ngOnInit(): void {
-    this.updateImageSize();
-    this.checkOrientation();
-  }
-
-  ngAfterViewInit(): void {
-    this.checkOrientation();
+  constructor() {
+    this.detectOrientation();
+    this.detectMobileDevice();
   }
 
   @HostListener('window:resize', ['$event'])
-  onResize(event: any) {
-    this.updateImageSize();
+  onResize(event: Event) {
+    this.detectOrientation();
+    this.detectMobileDevice();
   }
 
-  @HostListener('window:orientationchange', ['$event'])
-  onOrientationChange(event: any) {
-    this.checkOrientation();
-  }
-
-  updateImageSize() {}
-
-//in mobile always will show horizontal way to see gallery
-  checkOrientation() {
-    this.isLandscape = window.matchMedia("(orientation: landscape)").matches;
-    const container = document.querySelector('.carousel-container') as HTMLElement;
-
-    if (container) {
-      if (this.isLandscape) {
-        container.style.transform = "rotate(0deg)";
-        container.style.width = "100vw";
-        container.style.height = "100vh";
-      } else {
-        container.style.transform = "rotate(90deg)";
-        container.style.width = "100vh";
-        container.style.height = "100vw";
-      }
+  detectOrientation() {
+    if (window.innerHeight > window.innerWidth) {
+      document.body.classList.add('portrait');
+      document.body.classList.remove('landscape');
+    } else {
+      document.body.classList.add('landscape');
+      document.body.classList.remove('portrait');
     }
   }
+
+  detectMobileDevice() {
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    if (isMobile) {
+      document.body.classList.add('mobile');
+    } else {
+      document.body.classList.remove('mobile');
+    }
+  }
+
 
   goToSlide(index: number) {
     const previousIndex = this.currentIndex;
     this.currentIndex = index;
-    
-    gsap.to(`.carousel-image-${previousIndex}`, {
-      opacity: 0,
-      scale: 1.05,
-      duration: 2, // 2 seconds
-      ease: 'power2.inOut',
-      onComplete: () => {
-        gsap.to(`.carousel-image-${this.currentIndex}`, {
-          opacity: 1,
-          scale: 1,
-          duration: 2, // 2 seconds
-          ease: 'power2.inOut'
-        });
-      }
-    });
+  
+    const prevElement = document.querySelector(`.carousel-image-${previousIndex}`);
+    const currentElement = document.querySelector(`.carousel-image-${this.currentIndex}`);
+  
+    if (prevElement && currentElement) {
+      gsap.to(prevElement, {
+        opacity: 0,
+        scale: 1.05,
+        duration: 2, // 2 seconds
+        ease: 'power2.inOut',
+        onComplete: () => {
+          gsap.to(currentElement, {
+            opacity: 1,
+            scale: 1,
+            duration: 2, // 2 seconds
+            ease: 'power2.inOut'
+          });
+        }
+      });
+    }
   }
+  
 
   nextSlide() {
     const nextIndex = (this.currentIndex + 1) % this.slides.length;
@@ -94,4 +94,30 @@ export class ImageSliderComponent implements OnInit, AfterViewInit {
   closeCarousel() {
     this.showCarousel = false;
   }
+
+  //methods for autoplay
+  startAutoplay(){
+    this.autoplayInterval = setInterval(() => {
+      this.nextSlide();
+    }, 2000);
+  }
+
+  stopAutoplay(){
+    clearInterval(this.autoplayInterval);
+  }
+
+  toggleAutoplay(){
+    this.autoplayEnabled = !this.autoplayEnabled;
+    if(this.autoplayEnabled) {
+      this.startAutoplay();
+    } else {
+      this.stopAutoplay();
+    }
+  }
+
+  ngOnDestroy(): void {
+    this.stopAutoplay();
+  }
+
+  
 }

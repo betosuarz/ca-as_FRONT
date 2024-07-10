@@ -9,7 +9,8 @@
   overflow: hidden;
   background-color: #000;
   color: #fff;
-  transition: opacity 0.5s ease-in-out;
+/* transition: opacity 0.5s ease-in-out;*/
+  transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
 }
 
 
@@ -43,7 +44,7 @@
 .carousel-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain; /* image fully visible no matter size of the screen*/
 }
 
 .thumbnails {
@@ -182,46 +183,67 @@
   right: 20px;
 }
 
-/* @media (max-width: 768px) {
-  .carousel {
-    height: 60vh;
-  }
-  .thumbnails img {
-    width: 40px;
-    height: 40px;
-  }
-} */
-@media (max-width: 768px) and (orientation: portrait) {
+/*autoplay*/
+
+.hidden {
+  display: none;
+}
+
+.play-stop-btn {
+  position: absolute;
+  top: 20px;
+  right: 60px;
+  width: 20px;
+  height: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.play-stop-btn .icon {
+  width: 20px;
+  height: 20px;
+}
+
+.play-stop-btn:hover {
+  color: #D2B48C;
+  transform: scale(1.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+/*media query*/
+@media (max-width: 767px) {
   .carousel-container {
-    width: 100vh;
-    height: 100vw;
-    transform: rotate(90deg);
-    transform-origin: center center;
-    overflow: auto;
+    flex-direction: row;
   }
 
   .carousel-image img {
-    object-fit: contain;
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (orientation: portrait) {
+  .carousel-container {
+    flex-direction: column;
   }
 
-  .thumbnails {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%) rotate(-90deg);
+  .carousel-image img {
+    width: auto;
+    height: 100%;
+  }
+}
+
+@media (orientation: landscape) {
+  .carousel-container {
+    flex-direction: row;
   }
 
-  .navigation {
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%) rotate(-90deg);
-  }
-
-  .close-btn {
-    top: auto;
-    bottom: 20px;
-    right: 20px;
-    transform: rotate(-90deg);
+  .carousel-image img {
+    width: 100%;
+    height: auto;
   }
 }

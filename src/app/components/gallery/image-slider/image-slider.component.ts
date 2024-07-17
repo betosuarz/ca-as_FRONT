@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { AfterViewInit, Component, HostListener, OnInit } from '@angular/core';
+import { AfterViewInit, Component, HostListener, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { gsap } from 'gsap';
 //hammer ???
 
@@ -11,11 +11,10 @@ import { gsap } from 'gsap';
   styleUrls: ['./image-slider.component.css']
 })
 export class ImageSliderComponent{
-  slides = [
-    { image: 'assets/gallery/sepulcro/SEPULCRO-1-scaled.jpg' },
-    { image: 'assets/gallery/sepulcro/SEPULCRO-2-scaled.jpg' },
-    { image: 'assets/gallery/sepulcro/SEPULCRO-25-scaled.jpg' },
-  ];
+  @Input() slides: string[] = [];
+  @Input() startIndex = 0;
+  @Output() close = new EventEmitter<void>();
+
 
   currentIndex = 0;
   showCarousel = true;
@@ -27,6 +26,10 @@ export class ImageSliderComponent{
   constructor() {
     this.detectOrientation();
     this.detectMobileDevice();
+  }
+
+  ngOnInit(): void {
+    this.currentIndex = this.startIndex;
   }
 
   @HostListener('window:resize', ['$event'])
@@ -78,6 +81,26 @@ export class ImageSliderComponent{
         }
       });
     }
+    
+    const prevThumbnail = document.querySelector(`.thumbnails img:nth-child(${previousIndex + 1})`);
+    const currentThumbnail = document.querySelector(`.thumbnails img:nth-child(${this.currentIndex + 1})`);
+
+    if (prevThumbnail && currentThumbnail) {
+      gsap.to(prevThumbnail, {
+        scale: 1,
+        duration: 2, // 2 seconds
+        ease: 'power2.inOut',
+        onComplete: () => {
+          gsap.to(currentThumbnail, {
+            scale: 1.4,
+            duration: 2, // 2 seconds
+            ease: 'power2.inOut'
+          });
+        }
+      });
+    }
+
+    
   }
   
 
@@ -93,6 +116,7 @@ export class ImageSliderComponent{
 
   closeCarousel() {
     this.showCarousel = false;
+    this.close.emit();
   }
 
   //methods for autoplay
@@ -117,6 +141,15 @@ export class ImageSliderComponent{
 
   ngOnDestroy(): void {
     this.stopAutoplay();
+  }
+
+  //thumbnails
+
+  getVisibleThumbnails(): string[] {
+    const visibleThumbnailsCount = window.innerWidth <= 767 ? 3 : 5;
+    const startIndex = Math.max(0, this.currentIndex - 2);
+    const endIndex = Math.min(this.slides.length, startIndex + visibleThumbnailsCount);
+    return this.slides.slice(startIndex, endIndex);
   }
 
   

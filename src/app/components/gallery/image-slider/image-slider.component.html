@@ -6,7 +6,7 @@
       </svg>
     </button>
     <div class="carousel-image" *ngFor="let slide of slides; let i = index" [ngClass]="{'active': i === currentIndex}">
-      <img [src]="slide.image" alt="Slide image">
+      <img [src]="slide" alt="Slide image">
     </div>
     <button class="nav-arrow right-arrow" [ngClass]="{'hidden': autoplayEnabled}" (click)="nextSlide()">
       <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -18,7 +18,10 @@
     </div>
   </div>
   <div class="thumbnails" [ngClass]="{'hidden': autoplayEnabled}">
-    <img *ngFor="let slide of slides; let i = index" [src]="slide.image" (click)="goToSlide(i)" [ngClass]="{'selected': i === currentIndex}">
+    <img *ngFor="let slide of getVisibleThumbnails(); let i = index" 
+         [src]="slide" 
+         (click)="goToSlide(i + (currentIndex >= 2 ? currentIndex - 2 : 0))"
+         [ngClass]="{'selected': i + (currentIndex >= 2 ? currentIndex - 2 : 0) === currentIndex}">
   </div>
   <button class="close-btn" (click)="closeCarousel()"></button>
   <button class="play-stop-btn" (click)="toggleAutoplay()">

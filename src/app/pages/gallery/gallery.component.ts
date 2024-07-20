@@ -14,6 +14,7 @@ import { ICategory } from '../../interfaces/icategory';
   styleUrls: ['./gallery.component.css'],
   providers: [TitleCasePipe]
 })
+
 export class GalleryComponent implements OnInit {
   categories: ICategory[] = [];
   images: string[] = [];

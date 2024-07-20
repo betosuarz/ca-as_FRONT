@@ -1,0 +1,36 @@
+<div *ngIf="showCarousel" class="carousel-container">
+  <div class="carousel">
+    <button class="nav-arrow left-arrow" [ngClass]="{'hidden': autoplayEnabled}" (click)="previousSlide()">
+      <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v14M5 12h14"></path>
+      </svg>
+    </button>
+    <div class="carousel-image" *ngFor="let slide of slides; let i = index" [ngClass]="{'active': i === currentIndex}">
+      <img [src]="slide" alt="Slide image">
+    </div>
+    <button class="nav-arrow right-arrow" [ngClass]="{'hidden': autoplayEnabled}" (click)="nextSlide()">
+      <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v14M5 12h14"></path>
+      </svg>
+    </button>
+    <div class="navigation" [ngClass]="{'hidden': autoplayEnabled}">
+      <span>{{currentIndex + 1}} / {{slides.length}}</span>
+    </div>
+  </div>
+  <div class="thumbnails" [ngClass]="{'hidden': autoplayEnabled}">
+    <img *ngFor="let slide of getVisibleThumbnails(); let i = index" 
+         [src]="slide" 
+         (click)="goToSlide(i + (currentIndex >= 2 ? currentIndex - 2 : 0))"
+         [ngClass]="{'selected': i + (currentIndex >= 2 ? currentIndex - 2 : 0) === currentIndex}">
+  </div>
+  <button class="close-btn" (click)="closeCarousel()"></button>
+  <button class="play-stop-btn" (click)="toggleAutoplay()">
+    <svg *ngIf="!autoplayEnabled" class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5v14l11-7z"></path>
+    </svg>
+    <svg *ngIf="autoplayEnabled" class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18V6h4v12H6zm8-12h4v12h-4V6z"></path>
+    </svg>
+  </button>
+  <div class="footer" [ngClass]="{'hidden': autoplayEnabled}"></div>
+</div>

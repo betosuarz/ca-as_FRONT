@@ -1,6 +1,23 @@
-<div class="grid grid-cols-4 gap-4">
-    <img src="assets/gallery/exterior/CANAS-EXTERIOR-3-scaled.jpg" alt="Canas exterior">
-    <img src="assets/gallery/exterior/CANAS-EXTERIOR-3-scaled.jpg" alt="Canas exterior">
-    <img src="assets/gallery/exterior/CANAS-EXTERIOR-3-scaled.jpg" alt="Canas exterior">
-    <img src="assets/gallery/exterior/CANAS-EXTERIOR-3-scaled.jpg" alt="Canas exterior">
+<!-- <app-category-card
+  [categoryName]="'Museo'"
+  [categoryImage]="'assets/gallery/museo/MUSEO-1-scaled.jpg'"
+  [imageOrientation]="'vertical'">
+</app-category-card> -->
+  <!-- <app-image-slider></app-image-slider> -->
+
+  <div *ngIf="!showImageSlider" class="gallery-container">
+    <div class="category-list">
+      <button (click)="loadAllImages()" [class.active]="!selectedCategory">Todo</button>
+      <button *ngFor="let category of categories" 
+              (click)="loadCategoryImages(category.name)" 
+              [class.active]="selectedCategory === category.name">
+        {{ category.name }}
+      </button>
+    </div>
+    <div class="images-list">
+      <img *ngFor="let image of images; let i = index" [src]="image" alt="Gallery image" (click)="openImageSlider(images, i)" />
+    </div>
   </div>
+  
+  <app-image-slider *ngIf="showImageSlider" [slides]="selectedImages" [startIndex]="startIndex" (close)="closeImageSlider()"></app-image-slider>
+  

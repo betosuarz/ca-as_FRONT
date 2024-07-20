@@ -1,3 +1,16 @@
+.image-slider {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000; /* High z-index to ensure it's on top */
+  background-color: rgba(0, 0, 0, 0.8); /* Optional: dark background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .carousel-container {
   position: relative;
   width: 100vw;
@@ -161,7 +174,7 @@
 .close-btn:hover:after {
   transform: rotate(0deg);
 }
-/*-----*/
+/*---arrows--*/
 
 .nav-arrow {
   position: absolute;
@@ -248,7 +261,7 @@
   }
 
   .thumbnails img.selected {
-    transform: scale(1.2); /* Slightly smaller scale for mobile */
+    transform: scale(1.2);
   }
 }
 

@@ -1,10 +1,8 @@
 import { Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { AbbeyComponent } from './pages/abbey/abbey.component';
-import { RatesComponent } from './pages/rates/rates.component';
 import { NewsComponent } from './pages/news/news.component';
 import { ContactComponent } from './pages/contact/contact.component';
-import { ScheduleComponent } from './pages/schedule/schedule.component';
 import { GalleryComponent } from './pages/gallery/gallery.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { PrivacyPolicyComponent } from './pages/privacy-policy/privacy-policy.component';
@@ -14,25 +12,13 @@ import { LegalNoticeComponent } from './pages/legal-notice/legal-notice.componen
 import { ReturnPolicyComponent } from './pages/return-policy/return-policy.component';
 import { FaqComponent } from './pages/faq/faq.component';
 import { VisitsComponent } from './pages/visits/visits.component';
-import { CurrentsComponent } from './pages/currents/currents.component';
-import { HistoryComponent } from './pages/history/history.component';
+
 
 export const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  // { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
-  {
-    path: 'abbey', component: AbbeyComponent, children: [
-      { path: 'history', component: HistoryComponent },
-      { path: 'currents', component: CurrentsComponent },
-    ],
-  },
-  {
-    path: 'visits', component: VisitsComponent, children: [
-      { path: 'schedule', component: ScheduleComponent },
-      { path: 'rates', component: RatesComponent },
-    ],
-  },
-
+  { path: 'abbey', component: AbbeyComponent },
+  { path: 'visits', component: VisitsComponent },
   { path: 'news', component: NewsComponent },
   { path: 'gallery', component: GalleryComponent },
   { path: 'contact', component: ContactComponent },

@@ -2,12 +2,26 @@
   border-left: rgb(224, 224, 224) 1px solid;
 }
 
+.p-title {
+  margin-top: 60px;
+}
+
 @media screen and (min-width: 640px) {
   .img-left {
     padding: 0px 25px 5px 0px;
+    height: 250px;
+    width: auto;
   }
 
   .img-right {
     padding: 0px 0px 5px 25px;
+    height: 250px;
+    width: auto;
+  }
+
+  .img-tall {
+    padding: 0px 0px 5px 25px;
+    height: 400px;
+    width: auto;
   }
 }

@@ -1,55 +1,21 @@
-<!-- BARRA SUPERIOR FIJA -->
-<nav class="w-full bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700">
-  <div class="px-3 py-3 lg:px-5 lg:pl-3">
-    <div class="flex items-center justify-between">
-      <div class="flex items-center justify-start rtl:justify-end z-200">
-
-        <!-- drawer init and show -->
-        <button
-          class="text-gray-500 hover:text-gray-900 hover:bg-gray-100 focus:ring-2 focus:ring-gray-300 font-bold rounded-lg text-sm px-3 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
-          type="button" data-drawer-target="drawer-navigation" data-drawer-show="drawer-navigation"
-          aria-controls="drawer-navigation">
-          <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg">
-            <path clip-rule="evenodd" fill-rule="evenodd"
-              d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z">
-            </path>
-          </svg>
-        </button>
-        <a [routerLink]="['/home']" class="flex mx-2 md:me-24">
-          <img src="../../../assets/img_logo/Logotipo Cañas Luz NEGRO LARGO WEB.png" class="h-8 me-3"
-            alt="Cañas Logo" />
-          <span class="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap dark:text-white"></span>
-        </a>
-      </div>
-        <!--politics-->
-      <app-politics></app-politics>
-    </div>
-  </div>
-</nav>
-
-<!-- BARRA LATEAL FLOTANTE -->
-
-<!-- drawer component -->
-<div id="drawer-navigation"
-  class="drawer-navigation fixed left-0 z-40 w-64 h-screen p-4 overflow-y-auto transition-transform -translate-x-full bg-white dark:bg-gray-800"
-  tabindex="-1" aria-labelledby="drawer-navigation-label">
-  <h5 id="drawer-navigation-label" class="text-base font-semibold text-xs text-gray-500 uppercase dark:text-gray-400">Menu</h5>
-
-  <!-- Botón cerrar menú flotante -->
-  <button type="button" data-drawer-hide="drawer-navigation" aria-controls="drawer-navigation"
-    class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 absolute top-2.5 end-2.5 inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white">
-    <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-      <path fill-rule="evenodd"
-        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-        clip-rule="evenodd"></path>
+<nav  [ngClass]="{'absolute-nav': isHomePage()}">
+  <button (click)="toggleSideMenu()" class="mobile-menu-button">
+    @if(!isSideMenuOpen){
+      <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+      xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+      <path clip-rule="evenodd" fill-rule="evenodd"
+        d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z">
+      </path>
     </svg>
-    <span class="sr-only">Close menu</span>
+    }@else {
+      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 22" stroke-width="2" stroke="currentColor" class="w-6 h-6" width="24" height="24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+      </svg>
+    }
   </button>
-
-<!--menu-->
-<app-menu></app-menu>
-<!--horario-->
-<app-horario></app-horario>
-<!-- info-->
-<app-monastery-info></app-monastery-info>
+  <a [routerLink]="['/home']">
+    <img src="../../../assets/img_logo/Logotipo Cañas Luz NEGRO LARGO WEB 2x.png" 
+    alt="Cañas Logo" /></a>
+  <app-politics></app-politics>
+</nav>
+<app-side-menu [isOpen]="isSideMenuOpen"></app-side-menu>

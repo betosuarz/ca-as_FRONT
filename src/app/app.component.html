@@ -1,5 +1,8 @@
 <header>
   <app-header></app-header>
+  @if(isHomePage()){ 
+  <app-carousel></app-carousel>
+  }
 </header>
 <main>
   @if(!isTargetPage()){

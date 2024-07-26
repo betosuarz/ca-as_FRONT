@@ -1,11 +1,12 @@
 <div class="z-2 top-0 rounded-lg dark:border-gray-700 md:h-screen">
 
   <!-- Sección de títulos -->
-  <h1 class="text-3xl sm:text-4xl md:text-5xl mt-12 md:mt-20 font-extrabold text-gray-500 dark:text-white text-center">
-    <small class="ms-2 font-semibold text-gray-900 dark:text-gray-400">Monasterio de Santa María</small>
-    <br>de San Salvador
-  </h1>
-  <h3 class="text-xl sm:text-2xl md:text-3xl md:mt-15 font-semibold text-gray-700 dark:text-white text-center">
+  <h1
+    class="text-4xl sm:text-5xl md:text-6xl mt-12 md:mt-20 font-extrabold text-gray-500 dark:text-white text-center ms-2 font-semibold text-gray-900 dark:text-gray-400">
+    Monasterio</h1>
+  <h3 class="font-semibold text-2xl sm:text-4xl lg:text-5xl text-center text-gray-500 pt-3">de Santa María de San
+    Salvador</h3>
+  <h3 class="text-xl sm:text-2xl md:text-3xl md:mt-15 font-semibold text-gray-700 dark:text-white text-center sm:pt-1">
     de Cañas
   </h3>
 
@@ -13,28 +14,34 @@
   <section class="bg-white dark:bg-gray-900 mt-2">
     <div class="py-8 mx-auto px-7 sm:px-10 md:px-20 lg:py-16 xl:px-25 grid lg:grid-cols-2 gap-8">
       <div class="flex flex-col justify-start">
-        <h2 class="text-3xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight leading-none text-gray-900 dark:text-white">
+        <h2
+          class="text-3xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight leading-none text-gray-900 dark:text-white">
           Horarios
         </h2>
         <hr class="mt-4 border-gray-500">
         <p class="mt-4 text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400">
-          Descubre la serenidad y el encanto histórico del Monasterio de Cañas: una joya escondida que te transportará en el tiempo, ofreciendo una experiencia inolvidable llena de historia y de belleza.
+          Descubre la serenidad y el encanto histórico del Monasterio de Cañas: una joya escondida que te transportará
+          en el tiempo, ofreciendo una experiencia inolvidable llena de historia y de belleza.
         </p>
         <div class="flex justify-start">
           <app-schedule [isInMenu]="false"></app-schedule>
         </div>
       </div>
       <div class="flex flex-col justify-start">
-        <h2 class="text-3xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight leading-none text-gray-900 dark:text-white">
+        <h2
+          class="text-3xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight leading-none text-gray-900 dark:text-white">
           Tarifas
         </h2>
         <hr class="mt-4 border-gray-500">
         <div class="mt-4 mb-8 text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400">
-          <p>Explora la historia y la serenidad del monasterio con nuestras tarifas accesibles. Compra tus entradas hoy mismo y disfruta de una experiencia única en un entorno de paz y belleza. Ven y descubre la tranquilidad que te espera en cada rincón de nuestro sagrado recinto.</p>
-          <br>
-          <p>Para que puedas elegir las entradas que mejor se adapten a tus necesidades, ofrecemos cuatro opciones diferentes con precios muy asequibles para todos.</p>
-          <br>
-          <p>¡Te esperamos con los brazos abiertos!</p>
+          <p class="pb-3">Explora la historia y la serenidad del monasterio con nuestras tarifas accesibles. Compra tus
+            entradas hoy
+            mismo y disfruta de una experiencia única en un entorno de paz y belleza. Ven y descubre la tranquilidad que
+            te espera en cada rincón de nuestro sagrado recinto.</p>
+          <p class="pb-3">Para que puedas elegir las entradas que mejor se adapten a tus necesidades, ofrecemos cuatro
+            opciones
+            diferentes con precios muy asequibles para todos.</p>
+          <p class="pb-2">¡Te esperamos con los brazos abiertos!</p>
         </div>
         <div class="informacion text-center">
           <button [routerLink]="['/rates']" class="bg-blue-700 hover:bg-black text-white font-bold py-2 px-3 rounded">
@@ -46,15 +53,23 @@
   </section>
 
   <!-- Sección del vídeo -->
-  <div class="m-0 p-0 mb-24">
-  <iframe class="mx-auto w-full lg:max-w-4xl xl:max-w-6xl h-80 lg:h-96 xl:h-[500px] rounded-lg"
-    src="../../../assets/video/Monasterio de Cañas VER.mp4" title="YouTube video player"
-    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen></iframe>
+  <!-- <div class="m-0 p-0 mb-24">
+    <iframe class="mx-auto w-full lg:max-w-4xl h-80 lg:h-96 xl:h-[500px] rounded-lg"
+      src="../../../assets/video/Monasterio de Cañas VER.mp4" title="YouTube video player" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen></iframe>
+  </div> -->
+  <div class="mx-5 mt-10 mb-20">
+    <video class="video" controls>
+      <source src="./../../../assets/video/Monasterio de Cañas VER.mp4" type="video/mp4" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+    </video>
   </div>
 
   <!-- Parallax effect -->
-  <div class="main-div w-100 justify-center h-540 md:w-100 xl:w-100 md:h-550 overflow-y-scroll bg-cover bg-fixed bg-center bg-no-repeat shadow-lg mt-4 p-10 rounded-lg"
+  <div
+    class="main-div w-100 justify-center h-540 md:w-100 xl:w-100 md:h-550 overflow-y-scroll bg-cover bg-fixed bg-center bg-no-repeat shadow-lg mt-4 p-10 rounded-lg"
     style="background-image:url('../../../assets/home_carousel/CAÑAS INTERIOR-109.jpg');">
     <div class="mt-40">
       <div class="bg-black bg-opacity-75 p-4 sm:p-10 sm:pt-10 rounded-2">
@@ -66,32 +81,47 @@
         </div>
         <p class="mt-4 leading-7 text-slate-500 text-white">
           El Monasterio de Cañas, fundado en el siglo XII, es una joya cisterciense que combina historia y serenidad.
-          Sus muros góticos, con arcos y vitrales elegantes, cuentan historias de fe y armonía espiritual. Cada rincón invita a un viaje en el tiempo, ofreciendo una conexión profunda con el pasado.
+          Sus muros góticos, con arcos y vitrales elegantes, cuentan historias de fe y armonía espiritual. Cada rincón
+          invita a un viaje en el tiempo, ofreciendo una conexión profunda con el pasado.
         </p>
         <p class="mt-4 leading-7 text-slate-500 text-white">
-          Este monasterio no solo destaca por su valor histórico, sino también por su ambiente de paz. Los jardines cuidados y los espacios interiores ofrecen un refugio perfecto para escapar del bullicio y encontrar tranquilidad. Cada visita es una oportunidad para redescubrir la paz interior y explorar un tesoro de cultura y belleza arquitectónica.
+          Este monasterio no solo destaca por su valor histórico, sino también por su ambiente de paz. Los jardines
+          cuidados y los espacios interiores ofrecen un refugio perfecto para escapar del bullicio y encontrar
+          tranquilidad. Cada visita es una oportunidad para redescubrir la paz interior y explorar un tesoro de cultura
+          y belleza arquitectónica.
         </p>
       </div>
     </div>
   </div>
 
   <!-- Sección de contacto -->
-  <section class="bg-center bg-no-repeat bg-[url('../../../src/assets/home_carousel/CAÑAS 19 MAYO-21.jpg')] bg-gray-700 bg-blend-multiply mt-10">
+  <section
+    class="bg-center bg-no-repeat bg-[url('../../../src/assets/home_carousel/CAÑAS 19 MAYO-21.jpg')] bg-gray-700 bg-blend-multiply mt-10">
     <div class="px-4 mx-auto max-w-screen-xl text-center py-20 lg:py-45">
-      <h1 class="text-2xl sm:text-2xl md:text-3xl mt-2 md:mt-15 font-semibold text-gray-700 dark:text-white text-center mb-3 font-extrabold tracking-tight leading-none text-white md:text-3xl lg:text-4xl">
+      <h1
+        class="text-2xl sm:text-2xl md:text-3xl mt-2 md:mt-15 font-semibold text-gray-700 dark:text-white text-center mb-3 font-extrabold tracking-tight leading-none text-white md:text-3xl lg:text-4xl">
         ¿Por qué visitar esta Abadía?
       </h1>
       <p class="text-white px-5 md:px-20">
-        Visitar el Monasterio de Cañas es sumergirse en un oasis de paz y cultura medieval. Fundada en el siglo XII, esta abadía cisterciense es un testimonio vivo de la rica herencia espiritual y arquitectónica de la región. Sus majestuosos arcos góticos y vitrales te transportan a otra época, mientras que sus tranquilos jardines ofrecen un refugio perfecto para la reflexión. Este lugar no sólo invita a explorar su historia y belleza arquitectónica, sino que también proporciona una experiencia única de serenidad y conexión espiritual, ideal para aquellos en busca de paz y enriquecimiento cultural.
+        Visitar el Monasterio de Cañas es sumergirse en un oasis de paz y cultura medieval. Fundada en el siglo XII,
+        esta abadía cisterciense es un testimonio vivo de la rica herencia espiritual y arquitectónica de la región. Sus
+        majestuosos arcos góticos y vitrales te transportan a otra época, mientras que sus tranquilos jardines ofrecen
+        un refugio perfecto para la reflexión. Este lugar no sólo invita a explorar su historia y belleza
+        arquitectónica, sino que también proporciona una experiencia única de serenidad y conexión espiritual, ideal
+        para aquellos en busca de paz y enriquecimiento cultural.
       </p>
       <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 mt-10">
-        <a [routerLink]="['/contact']" class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
+        <a [routerLink]="['/contact']"
+          class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
           Descúbrenos
-          <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
+          <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+            viewBox="0 0 14 10">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M1 5h12m0 0L9 1m4 4L9 9" />
           </svg>
         </a>
-        <a [routerLink]="['/faq']" class="inline-flex justify-center hover:text-gray-900 items-center py-3 px-5 sm:ms-4 text-base font-medium text-center text-white rounded-lg border border-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-400">
+        <a [routerLink]="['/faq']"
+          class="inline-flex justify-center hover:text-gray-900 items-center py-3 px-5 sm:ms-4 text-base font-medium text-center text-white rounded-lg border border-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-400">
           Preguntas frecuentes
         </a>
       </div>

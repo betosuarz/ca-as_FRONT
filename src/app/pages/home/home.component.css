@@ -1,3 +1,27 @@
 .informacion {
-  font-family: Roboto, "Helvetica Neue", sans-serif;    
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+@media screen and (min-width: 640px) and (max-width: 767px) {
+  .video {
+    padding: 0px 50px
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .video {
+    padding: 0px 100px
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+  .video {
+    padding: 0px 200px
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .video {
+    padding: 0px 325px
+  }
 }

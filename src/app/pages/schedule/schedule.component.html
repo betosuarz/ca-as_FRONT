@@ -3,7 +3,7 @@
     <div class="mb-4">
       <img src="assets/img_logo/cropped-Logotipo-Canas-Luz-BLANCO.png" alt="Logotipo" class="w-full rounded-t-lg">
     </div> -->
-    <!-- <div class="bg-white rounded-lg overflow-hidden shadow-lg p-6">
+<!-- <div class="bg-white rounded-lg overflow-hidden shadow-lg p-6">
       <div class="px-6 py-4">
         <div class="font-bold text-5xl mb-2 text-black-700">ABIERTO</div>
         <p class="text-gray-700 font-bold text-black-500 text-4xl">TODOS LOS DÍAS</p>
@@ -20,21 +20,19 @@
         </button>
       </div>
     </div> -->
-  <!-- </div>
+<!-- </div>
 </div> -->
 
 <div class="informacion" [ngClass]="{ 'home': !isInMenu, 'menu': isInMenu }">
-  <div class="px-1 py-2">
-    <div class="font-bold text-2xl mb-2 text-black-700">ABIERTO TODOS LOS DIAS</div>
-      <p class="horarios text-gray-700 font-bold text-xl mb-3">De 10.30 a 14.30 horas</p>
-      <p class="horarios text-gray-700 font-bold text-xl mb-1">De 16.00 a 20.00 horas</p>
-    <p>(Últimas entradas siempre 30 minutos antes)</p>    
+  <div class="justify-center">
+    <div class="font-bold text-2xl mb-2 text-black-700 text-center">ABIERTO TODOS LOS DIAS</div>
+    <p class="horarios text-gray-700 font-bold text-xl mb-1 text-center">De 10.30 a 14.30 horas</p>
+    <p class="horarios text-gray-700 font-bold text-xl mb-2 text-center">De 16.00 a 20.00 horas</p>
+    <p class="text-center text-sm sm:text-lg"><i>(Última entrada 30 minutos antes del cierre)</i></p>
   </div>
-  <div *ngIf="!isInMenu" class="px-6 pt-4 pb-2 text-center">
+  <div *ngIf="!isInMenu" class="px-6 pt-7 pb-2 text-center">
     <button [routerLink]="['/faq']" class="bg-blue-700 hover:bg-black text-white font-bold py-2 px-3 rounded">
       MÁS INFORMACIÓN
     </button>
   </div>
 </div>
-
-

@@ -1,5 +1,5 @@
 .informacion {
-  font-family: Roboto, "Helvetica Neue", sans-serif;    
+  font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
 .menu {
@@ -27,17 +27,14 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  gap: 1rem; /* Ajusta el espacio entre botones si es necesario */
+  gap: 1rem;
+  /* Ajusta el espacio entre botones si es necesario */
 }
 
 
 :host {
   display: block;
   border-radius: 0.5rem;
-  padding: 1rem;
-  margin: 1rem auto;
+  padding: 0.5rem;
+  margin: 0.5rem auto;
 }
-
-
-
-

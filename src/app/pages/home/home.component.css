@@ -2,6 +2,13 @@
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
+.abbey-name {
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: cursive;
+}
+
 @media screen and (min-width: 640px) and (max-width: 767px) {
   .video {
     padding: 0px 50px

@@ -8,7 +8,7 @@ import { ICategory } from '../interfaces/icategory';
   providedIn: 'root'
 })
 export class GalleryService {
-  private basePath = 'assets/gallery';
+  private basePath = 'assets/img-gallery';
 
   constructor(private http: HttpClient) {}
 
@@ -16,6 +16,9 @@ export class GalleryService {
     return this.http.get<{ categories: ICategory[] }>(`${this.basePath}/images.json`).pipe(
       map(response => response.categories)
     );
+  }
+
+  getCategoryCoverImage(){
   }
 
   getImagesByCategory(categoryName: string): Observable<string[]> {

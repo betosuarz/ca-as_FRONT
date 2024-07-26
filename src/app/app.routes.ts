@@ -11,14 +11,14 @@ import { TermsConditionsComponent } from './pages/terms-conditions/terms-conditi
 import { LegalNoticeComponent } from './pages/legal-notice/legal-notice.component';
 import { ReturnPolicyComponent } from './pages/return-policy/return-policy.component';
 import { FaqComponent } from './pages/faq/faq.component';
-import { VisitsComponent } from './pages/visits/visits.component';
+import { RatesComponent } from './pages/rates/rates.component';
 
 
 export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'abbey', component: AbbeyComponent },
-  { path: 'visits', component: VisitsComponent },
+  { path: 'rates', component: RatesComponent },
   { path: 'news', component: NewsComponent },
   { path: 'gallery', component: GalleryComponent },
   { path: 'contact', component: ContactComponent },

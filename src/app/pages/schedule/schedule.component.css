@@ -1,3 +1,43 @@
-.informacion{
-    text-align: center;
+.informacion {
+  font-family: Roboto, "Helvetica Neue", sans-serif;    
 }
+
+.menu {
+  font-weight: 500;
+  color: #6B7280;
+  padding-top: 0.25rem;
+}
+
+.menu .horarios {
+  font-size: 1rem;
+}
+
+.home {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #6B7280;
+  padding-top: 0.25rem;
+}
+
+.home .horarios {
+  font-size: 1.75rem;
+}
+
+.flex-buttons {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem; /* Ajusta el espacio entre botones si es necesario */
+}
+
+
+:host {
+  display: block;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin: 1rem auto;
+}
+
+
+
+

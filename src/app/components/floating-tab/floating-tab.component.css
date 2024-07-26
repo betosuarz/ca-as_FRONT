@@ -8,6 +8,7 @@
     writing-mode: vertical-rl;
     text-orientation: mixed;
     cursor: pointer;
+    z-index: 3;
   }
 
   @media (max-width: 480px) {

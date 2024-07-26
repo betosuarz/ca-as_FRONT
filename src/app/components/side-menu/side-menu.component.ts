@@ -4,6 +4,7 @@ import { MonasteryInfoComponent } from '../head/monastery-info/monastery-info.co
 import { HorarioComponent } from '../head/horario/horario.component';
 import { SocialMediaComponent } from '../head/social-media/social-media.component';
 import { CommonModule } from '@angular/common';
+import { ScheduleComponent } from "../../pages/schedule/schedule.component";
 
 @Component({
   selector: 'app-side-menu',
@@ -13,8 +14,9 @@ import { CommonModule } from '@angular/common';
     MenuComponent,
     MonasteryInfoComponent,
     HorarioComponent,
-    SocialMediaComponent
-  ],
+    SocialMediaComponent,
+    ScheduleComponent
+],
   templateUrl: './side-menu.component.html',
   styleUrl: './side-menu.component.css'
 })

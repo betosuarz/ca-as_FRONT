@@ -1,23 +1,37 @@
-<!-- <app-category-card
-  [categoryName]="'Museo'"
-  [categoryImage]="'assets/gallery/museo/MUSEO-1-scaled.jpg'"
-  [imageOrientation]="'vertical'">
-</app-category-card> -->
-  <!-- <app-image-slider></app-image-slider> -->
-
   <div *ngIf="!showImageSlider" class="gallery-container">
     <div class="category-list">
       <button (click)="loadAllImages()" [class.active]="!selectedCategory">Todo</button>
-      <button *ngFor="let category of categories" 
+      <!-- <button *ngFor="let category of categories" 
               (click)="loadCategoryImages(category.name)" 
               [class.active]="selectedCategory === category.name">
         {{ category.name }}
-      </button>
+      </button> -->
+      <app-category-card *ngFor="let category of categories"
+      [categoryName]="category.name"
+
+      [selectedCategory]="selectedCategory"
+      (categorySelected)="loadCategoryImages($event)">
+</app-category-card>
     </div>
+
+<!--for arrows for categories-->
+      <!-- <div class="scroll-buttons">
+        <button class="scroll-button left" *ngIf="showLeftArrow" aria-label="Scroll Left">
+          <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 12H5M12 5l-7 7 7 7"></path>
+          </svg>
+        </button>
+        <button class="scroll-button right" aria-label="Scroll Right">
+          <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+        </button>
+      </div> -->
     <div class="images-list">
       <img *ngFor="let image of images; let i = index" [src]="image" alt="Gallery image" (click)="openImageSlider(images, i)" />
     </div>
   </div>
-  
   <app-image-slider *ngIf="showImageSlider" [slides]="selectedImages" [startIndex]="startIndex" (close)="closeImageSlider()"></app-image-slider>
   
+
+  <!--      [categoryImage]="getCategoryCoverImage(categoryName)"-->

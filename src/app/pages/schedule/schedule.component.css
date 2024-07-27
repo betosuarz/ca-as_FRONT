@@ -16,7 +16,6 @@
   font-size: 0.8rem;
 }
 
-
 .home {
   font-size: 1rem;
   font-weight: 500;
@@ -26,6 +25,12 @@
 
 .home .horarios {
   font-size: 1.75rem;
+  padding-top: 0.5rem;
+}
+
+.home .close {
+  font-size: 1.1rem;
+  padding-top: 1rem;
 }
 
 .flex-buttons {

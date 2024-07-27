@@ -14,12 +14,15 @@ export class GalleryService {
 
   getCategories(): Observable<ICategory[]> {
     return this.http.get<{ categories: ICategory[] }>(`${this.basePath}/images.json`).pipe(
-      map(response => response.categories)
+      map(response => response.categories.map(category => ({
+        ...category,
+        coverImage: category.images.length ? `${this.basePath}/${encodeURIComponent(category.name)}/${encodeURIComponent(category.images[0])}` : `${this.basePath}/default.jpg`
+      })))
     );
   }
 
-  getCategoryCoverImage(){
-  }
+//return img-gallery/default.jpg image if category is not found
+
 
   getImagesByCategory(categoryName: string): Observable<string[]> {
     return this.getCategories().pipe(

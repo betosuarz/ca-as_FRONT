@@ -1,17 +1,13 @@
   <div *ngIf="!showImageSlider" class="gallery-container">
     <div class="category-list">
-      <button (click)="loadAllImages()" [class.active]="!selectedCategory">Todo</button>
-      <!-- <button *ngFor="let category of categories" 
-              (click)="loadCategoryImages(category.name)" 
-              [class.active]="selectedCategory === category.name">
-        {{ category.name }}
-      </button> -->
-      <app-category-card *ngFor="let category of categories"
-      [categoryName]="category.name"
-
-      [selectedCategory]="selectedCategory"
-      (categorySelected)="loadCategoryImages($event)">
-</app-category-card>
+      <div class="category-card" [style.background-image]="'url(' + getCategoryCoverImage('default') + ')'">
+        <button (click)="loadAllImages()" [class.active]="!selectedCategory">Todo</button>
+      </div>
+      <div class="category-card" *ngFor="let category of categories" [style.background-image]="'url(' + getCategoryCoverImage(category.name) + ')'">
+        <button (click)="loadCategoryImages(category.name)" [class.active]="selectedCategory === category.name">
+          {{ category.name }}
+        </button>
+      </div>
     </div>
 
 <!--for arrows for categories-->
@@ -33,5 +29,3 @@
   </div>
   <app-image-slider *ngIf="showImageSlider" [slides]="selectedImages" [startIndex]="startIndex" (close)="closeImageSlider()"></app-image-slider>
   
-
-  <!--      [categoryImage]="getCategoryCoverImage(categoryName)"-->

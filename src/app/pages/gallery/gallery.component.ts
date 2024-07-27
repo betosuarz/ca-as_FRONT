@@ -1,7 +1,6 @@
-import { Component, OnInit, Input, Output, EventEmitter,ViewChild, ElementRef,  HostListener } from '@angular/core';
+import { Component, OnInit, EventEmitter} from '@angular/core';
 import { CommonModule, TitleCasePipe } from '@angular/common';
 import { ImageSliderComponent } from '../../components/gallery/image-slider/image-slider.component';
-import { CategoryCardComponent } from '../../components/gallery/category-card/category-card.component';
 import { GalleryService } from '../../services/gallery.service';
 import { ICategory } from '../../interfaces/icategory';
 
@@ -9,37 +8,40 @@ import { ICategory } from '../../interfaces/icategory';
 @Component({
   selector: 'app-gallery',
   standalone: true,
-  imports: [ImageSliderComponent, CategoryCardComponent, CommonModule],
+  imports: [ImageSliderComponent, CommonModule],
   templateUrl: './gallery.component.html',
   styleUrls: ['./gallery.component.css'],
   providers: [TitleCasePipe]
 })
 
 export class GalleryComponent implements OnInit {
-  @Input() categories: ICategory[] = [];
-  @Input() images: string[] = [];
-  @Output() categorySelected = new EventEmitter<string>();
-  @Output() imageClicked = new EventEmitter<{ images: string[], index: number }>();
-  @ViewChild('scrollableCategoryList') scrollableCategoryList!: ElementRef<HTMLDivElement>;
-  // categories: ICategory[] = [];
-  // images: string[] = [];
+  categories: ICategory[] = [];
+  images: string[] = [];
+  categorySelected = new EventEmitter<string>();
+  imageClicked = new EventEmitter<{ images: string[], index: number }>();
   selectedCategory: string | null = null;
   selectedImages: string[] = [];
   showImageSlider = false;
   startIndex = 0;
-
-  showLeftArrow = false;
-  showRightArrow = true;
+  coverImages: { [key: string]: string } = {};
 
   constructor(private galleryService: GalleryService) {}
 
   ngOnInit(): void {
     this.galleryService.getCategories().subscribe(categories => {
       this.categories = categories;
+      this.categories.forEach(category => {
+        this.coverImages[category.name] = category.coverImage || 'assets/img-gallery/default.jpg';
+        console.log(`Category: ${category.name}, Cover Image: ${this.coverImages[category.name]}`);
+      });
+
+      //default image for Todo
+      this.coverImages['default'] = 'assets/img-gallery/default.jpg';
     });
 
     this.loadAllImages();
   }
+  
 
   loadAllImages(): void {
     this.galleryService.getAllImages().subscribe(images => {
@@ -56,7 +58,8 @@ export class GalleryComponent implements OnInit {
     });
   }
 
-  getCategoryCoverImage(){
+  getCategoryCoverImage(categoryName: string): string {
+    return this.coverImages[categoryName] || this.coverImages['default'];
   }
 
   openImageSlider(images: string[], index: number): void {
@@ -70,22 +73,5 @@ export class GalleryComponent implements OnInit {
     this.showImageSlider = false;
   }
 
-  @HostListener('window:resize')
-  checkScroll(): void {
-    const element = this.scrollableCategoryList.nativeElement;
-    this.showLeftArrow = element.scrollLeft > 0;
-    this.showRightArrow = element.scrollWidth > element.clientWidth + element.scrollLeft;
-  }
-
-  scrollLeft(): void {
-    const element = this.scrollableCategoryList.nativeElement;
-    element.scrollBy({ left: -150, behavior: 'smooth' });
-    this.checkScroll();
-  }
-
-  scrollRight(): void {
-    const element = this.scrollableCategoryList.nativeElement;
-    element.scrollBy({ left: 150, behavior: 'smooth' });
-    this.checkScroll();
-  }
+  
 }

@@ -3,14 +3,53 @@
   flex-direction: column;
   align-items: center;
 }
-
+/*categories*/
 .category-list {
   display: flex;
-  flex-wrap: wrap;  /*nowrap*/
+  flex-wrap: wrap;
   justify-content: center;
   margin-bottom: 20px;
 }
+/*category card*/
+.category-card {
+  margin: 5px;
+  padding: 0;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
 
+.category-card button {
+  background-color: rgba(0, 0, 0, 0.3);
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  font-size: 1em;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 2;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  white-space: nowrap;
+  padding: 10px 20px;
+  width: fit-content;
+}
+
+.category-card button.active,
+.category-card button:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+.category-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+/*-----*/
 .images-list {
   display: flex;
   flex-wrap: wrap;

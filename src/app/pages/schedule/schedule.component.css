@@ -8,9 +8,14 @@
   padding-top: 0.25rem;
 }
 
-.menu .horarios {
+.menu .horarios-title {
   font-size: 1rem;
 }
+
+.menu .horarios {
+  font-size: 0.8rem;
+}
+
 
 .home {
   font-size: 1rem;

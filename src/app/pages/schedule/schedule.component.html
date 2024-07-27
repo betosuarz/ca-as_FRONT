@@ -25,10 +25,10 @@
 
 <div class="informacion" [ngClass]="{ 'home': !isInMenu, 'menu': isInMenu }">
   <div class="justify-center">
-    <div class="font-bold text-xl mb-2 text-black-700 text-center">ABIERTO TODOS LOS DIAS</div>
+    <div class="horarios-title font-bold text-xl mb-2 text-black-700 text-center">ABIERTO TODOS LOS DIAS</div>
     <p class="horarios text-gray-700 font-bold text-xl mb-1 text-center">De 10.30 a 14.30 horas</p>
     <p class="horarios text-gray-700 font-bold text-xl mb-2 text-center">De 16.00 a 20.00 horas</p>
-    <p class="text-center text-sm sm:text-lg"><i>(Última entrada 30 minutos antes del cierre)</i></p>
+    <p class="horarios text-center text-sm sm:text-lg"><i>(Última entrada 30 minutos antes del cierre)</i></p>
   </div>
   <div *ngIf="!isInMenu" class="px-6 pt-7 pb-2 text-center">
     <button [routerLink]="['/faq']" class="bg-blue-700 hover:bg-black text-white font-bold py-2 px-3 rounded">

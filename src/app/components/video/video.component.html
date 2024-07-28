@@ -1,7 +1,24 @@
-<div id="home-video" class="top-0 w-full h-screen">
-    <video class="w-full h-full object-cover" autoplay muted loop>
-      <source src="../../../assets/video/home_video_monastery.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
+<div id="home-video" class="relative top-0 w-full h-screen">
+  <div class="video-overlay"></div>
+  <video #videoPlayer class="w-full h-full object-cover" muted loop autoplay 
+         (loadedmetadata)="handleLoadedMetadata($event)" 
+         (canplay)="handleCanPlay($event)">
+    <source src="../../../assets/video/home_video_monastery.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <div class="controls">
+    <div *ngIf="isPlaying; else playButton" class="control-button" (click)="pauseVideo()">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="5" y="4" width="4" height="16" fill="gray"/>
+        <rect x="15" y="4" width="4" height="16" fill="gray"/>
+      </svg>
+    </div>
+    <ng-template #playButton>
+      <div class="control-button" (click)="playVideo()">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M8 5V19L19 12L8 5Z" fill="gray"/>
+        </svg>
+      </div>
+    </ng-template>
   </div>
-  
+</div>

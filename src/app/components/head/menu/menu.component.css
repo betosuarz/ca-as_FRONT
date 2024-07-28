@@ -1,0 +1,11 @@
+@media (min-width: 1024px){
+    .container{
+        font-size: 1.25rem;
+    }
+}
+
+@media(max-width:1023){
+    .container{
+        justify-items: center;
+    }
+}

@@ -4,8 +4,22 @@ nav {
   align-items: center;
   padding: 10px;
   width: 100%;
-  z-index: 10;
+  z-index: 20; /* Mayor z-index para asegurarse que esté sobre el side-menu */
   position: relative;
+  background-color: white; /* Fondo sólido para cubrir contenido */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra opcional para diferenciar el nav del contenido */
+}
+
+/* Agregar un pseudo-elemento para ocultar el contenido que se desplaza detrás del nav */
+nav::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white; /* Mismo color de fondo del nav */
+  z-index: -1; /* Para asegurar que esté debajo del contenido del nav */
 }
 
 .absolute-nav {

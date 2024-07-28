@@ -22,16 +22,4 @@ import { ScheduleComponent } from "../../pages/schedule/schedule.component";
 })
 export class SideMenuComponent {
   @Input() isOpen = false;
-  @Output() menuClosed = new EventEmitter<void>();
-
-  constructor(private eRef: ElementRef) {}
-
-  closeMenu() {
-    this.isOpen = false;
-    this.menuClosed.emit();
-  }
-
-  preventClose(event: MouseEvent) {
-    event.stopPropagation();
-  }
 }

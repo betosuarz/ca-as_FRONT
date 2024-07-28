@@ -20,17 +20,14 @@ import { NavigationService } from '../../services/navigation.service';
 export class HeaderComponent {
   isSideMenuOpen = false;
   
-  constructor(private navigationService: NavigationService) {}
+  constructor(
+    private navigationService: NavigationService) {}
 
-  isHomePage(): boolean {
-    return this.navigationService.isHomePage();
-  }
+    isHomePage(): boolean {
+      return this.navigationService.isHomePage();
+    }
 
-  toggleSideMenu(): void {
-    this.isSideMenuOpen = !this.isSideMenuOpen;
-  }
-
-  handleMenuClosed(): void {
-    this.isSideMenuOpen = false;
-  }
+    toggleSideMenu(): void {
+      this.isSideMenuOpen = !this.isSideMenuOpen;
+    }
 }

@@ -8,9 +8,11 @@ nav {
   position: relative;
 }
 
+
 .absolute-nav {
   position: absolute;
 }
+
 
 a {
   display: flex;
@@ -48,3 +50,4 @@ app-politics {
   padding: 0;
   margin-right: 1rem;
 }
+

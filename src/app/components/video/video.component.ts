@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, ElementRef, ViewChild, AfterViewInit, ChangeDetectorRef  } from '@angular/core';
+import { Component, Input, ElementRef, ViewChild, AfterViewInit, ChangeDetectorRef } from '@angular/core';
 
 @Component({
   selector: 'app-video',
@@ -12,12 +12,16 @@ export class VideoComponent implements AfterViewInit {
   isPlaying = false;
 
   @ViewChild('videoPlayer') videoPlayer!: ElementRef<HTMLVideoElement>;
-
+  @Input() menuOpen = false;
   constructor(private cdr: ChangeDetectorRef) {}
 
   ngAfterViewInit() {
     this.videoPlayer.nativeElement.muted = true;
     this.playVideo();
+
+    //pointer events
+    // this.videoPlayer.nativeElement.addEventListener('pointerdown', this.onPointerDown.bind(this));
+    // this.videoPlayer.nativeElement.addEventListener('pointerup', this.onPointerUp.bind(this));
   }
 
   handleLoadedMetadata(event: Event) {
@@ -44,4 +48,21 @@ export class VideoComponent implements AfterViewInit {
     this.isPlaying = false;
     this.cdr.detectChanges();
   }
+
+  togglePlayPause() {
+    if (this.isPlaying) {
+      this.pauseVideo();
+    } else {
+      this.playVideo();
+    }
+  }
+
+  // onPointerDown(event: PointerEvent) {
+  //   event.preventDefault();
+  //   this.videoPlayer.nativeElement.setPointerCapture(event.pointerId);
+  // }
+
+  // onPointerUp(event: PointerEvent) {
+  //   this.videoPlayer.nativeElement.releasePointerCapture(event.pointerId);
+  // }
 }

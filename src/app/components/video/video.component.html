@@ -1,8 +1,10 @@
 <div id="home-video" class="relative top-0 w-full h-screen">
-  <div class="video-overlay"></div>
+  <div class="video-overlay-top"></div>
+  <div class="video-overlay-bottom"></div>
   <video #videoPlayer class="w-full h-full object-cover" muted loop autoplay 
          (loadedmetadata)="handleLoadedMetadata($event)" 
-         (canplay)="handleCanPlay($event)">
+         (canplay)="handleCanPlay($event)"
+         (click)="togglePlayPause()">
     <source src="../../../assets/video/home_video_monastery.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>

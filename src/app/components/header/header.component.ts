@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { PoliticsComponent } from '../head/politics/politics.component';
 import { SideMenuComponent } from "../side-menu/side-menu.component";
 import { NavigationService } from '../../services/navigation.service';
+import { SideMenuService } from '../../services/side-menu.service';
 
 @Component({
   selector: 'app-header',
@@ -18,16 +19,22 @@ import { NavigationService } from '../../services/navigation.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-  isSideMenuOpen = false;
   
   constructor(
-    private navigationService: NavigationService) {}
+    private navigationService: NavigationService,
+    private sideMenuService: SideMenuService
+  
+  ) {}
 
     isHomePage(): boolean {
       return this.navigationService.isHomePage();
     }
 
     toggleSideMenu(): void {
-      this.isSideMenuOpen = !this.isSideMenuOpen;
+      this.sideMenuService.toggleSideMenu();
+    }
+
+    get isSideMenuOpen() {
+      return this.sideMenuService.sideMenuOpen$();
     }
 }

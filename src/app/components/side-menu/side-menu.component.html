@@ -1,7 +1,7 @@
 <div class="side-menu" [ngClass]="{'open': isOpen}">
   <div class="side-menu-content">
     <ul>
-      <li><app-menu></app-menu></li>
+      <li (click)="closeSideMenu()"><app-menu></app-menu></li>
       <li><app-social-media></app-social-media></li>
       <li><div class="menu"><app-schedule [isInMenu]="true"></app-schedule></div></li>
       <li><app-monastery-info></app-monastery-info></li>

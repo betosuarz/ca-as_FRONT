@@ -231,7 +231,7 @@ body {
   justify-content: space-between;
   flex: 1 1 45%;
   box-sizing: border-box;
-  margin: 0.5%;
+  margin: 2.5%;
   transition: transform 0.3s ease;
 }
 
@@ -283,10 +283,18 @@ body {
 
   .container {
     width: 430px;
+
   }
 
   .button-container {
     margin-top: 15px;
   }
 
+@media (max-width: 430px) {
+  .container{
+    width: 340px;
+    margin: 7px;
+  }
+
+  } 
 }

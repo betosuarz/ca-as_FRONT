@@ -1,4 +1,4 @@
-import { Component, OnInit, EventEmitter} from '@angular/core';
+import { Component, OnInit, EventEmitter, HostListener} from '@angular/core';
 import { CommonModule, TitleCasePipe } from '@angular/common';
 import { ImageSliderComponent } from '../../components/gallery/image-slider/image-slider.component';
 import { GalleryService } from '../../services/gallery.service';
@@ -24,6 +24,7 @@ export class GalleryComponent implements OnInit {
   showImageSlider = false;
   startIndex = 0;
   coverImages: { [key: string]: string } = {};
+
 
   constructor(private galleryService: GalleryService) {}
 

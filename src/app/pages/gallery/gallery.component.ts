@@ -1,4 +1,4 @@
-import { Component, OnInit, EventEmitter, HostListener} from '@angular/core';
+import { Component, OnInit, EventEmitter, ViewChildren, QueryList, ElementRef} from '@angular/core';
 import { CommonModule, TitleCasePipe } from '@angular/common';
 import { ImageSliderComponent } from '../../components/gallery/image-slider/image-slider.component';
 import { GalleryService } from '../../services/gallery.service';
@@ -15,6 +15,8 @@ import { ICategory } from '../../interfaces/icategory';
 })
 
 export class GalleryComponent implements OnInit {
+  @ViewChildren('categoryCard') categoryCards!: QueryList<ElementRef>;
+
   categories: ICategory[] = [];
   images: string[] = [];
   categorySelected = new EventEmitter<string>();
@@ -51,11 +53,14 @@ export class GalleryComponent implements OnInit {
     });
   }
 
-  loadCategoryImages(categoryName: string): void {
+  loadCategoryImages(categoryName: string, index?: number): void {
     this.galleryService.getImagesByCategory(categoryName).subscribe(images => {
       this.images = images;
       this.selectedCategory = categoryName;
       this.categorySelected.emit(categoryName);
+      if (index !== undefined) {
+        this.scrollToCategory(index);
+      }
     });
   }
 
@@ -72,6 +77,11 @@ export class GalleryComponent implements OnInit {
 
   closeImageSlider(): void {
     this.showImageSlider = false;
+  }
+
+  private scrollToCategory(index: number): void {
+    const categoryElement = this.categoryCards.toArray()[index].nativeElement;
+    categoryElement.scrollIntoView({ behavior: 'smooth', block: "end", inline: "start"  });
   }
 
   

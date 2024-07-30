@@ -1,16 +1,13 @@
 <div class="category-list">
-  <div class="category-card" [style.background-image]="'url(' + getCategoryCoverImage('default') + ')'">
+  <div class="category-card" #categoryCard [style.background-image]="'url(' + getCategoryCoverImage('default') + ')'">
     <button (click)="loadAllImages()" [class.active]="!selectedCategory">Todo</button>
   </div>
-  <div class="category-card" *ngFor="let category of categories" [style.background-image]="'url(' + getCategoryCoverImage(category.name) + ')'">
-    <button (click)="loadCategoryImages(category.name)" [class.active]="selectedCategory === category.name">
+  <div class="category-card" *ngFor="let category of categories; let i = index" #categoryCard [style.background-image]="'url(' + getCategoryCoverImage(category.name) + ')'">
+    <button (click)="loadCategoryImages(category.name, i)" [class.active]="selectedCategory === category.name">
       {{ category.name }}
     </button>
   </div>
 </div>
-
-
-
 
 <div *ngIf="!showImageSlider" class="gallery-container">
 

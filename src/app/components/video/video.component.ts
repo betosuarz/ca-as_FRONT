@@ -13,10 +13,12 @@ export class VideoComponent implements AfterViewInit {
 
   @ViewChild('videoPlayer') videoPlayer!: ElementRef<HTMLVideoElement>;
   @Input() menuOpen = false;
+
   constructor(private cdr: ChangeDetectorRef) {}
 
   ngAfterViewInit() {
     this.videoPlayer.nativeElement.muted = true;
+    this.setVideoSource();
     this.playVideo();
 
     //pointer events
@@ -55,6 +57,21 @@ export class VideoComponent implements AfterViewInit {
     } else {
       this.playVideo();
     }
+  }
+
+  private setVideoSource() {
+    const videoPlayer = this.videoPlayer.nativeElement;
+    const sources = videoPlayer.getElementsByTagName('source');
+
+    for (let i = 0; i < sources.length; i++) {
+      const source = sources[i];
+      if (window.matchMedia(source.media).matches) {
+        videoPlayer.src = source.src;
+        break;
+      }
+    }
+
+    videoPlayer.load();
   }
 
   // onPointerDown(event: PointerEvent) {

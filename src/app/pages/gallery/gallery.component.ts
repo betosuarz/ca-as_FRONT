@@ -35,7 +35,7 @@ export class GalleryComponent implements OnInit {
       this.categories = categories;
       this.categories.forEach(category => {
         this.coverImages[category.name] = category.coverImage || 'assets/img-gallery/default.jpg';
-        console.log(`Category: ${category.name}, Cover Image: ${this.coverImages[category.name]}`);
+        // console.log(`Category: ${category.name}, Cover Image: ${this.coverImages[category.name]}`);
       });
 
       //default image for Todo

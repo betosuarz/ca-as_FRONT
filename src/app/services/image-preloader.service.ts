@@ -18,11 +18,11 @@ export class ImagePreloaderService {
     }).pipe(
       map(({ jsonImages, galleryImages }) => [...jsonImages.images, ...galleryImages])
     ).subscribe((images: string[]) => {
-      console.log('Images to preload:', images);
+      // console.log('Images to preload:', images);
       images.forEach((image) => {
         const img = new Image();
         img.src = image;
-        console.log('Preloading image:', image);
+        // console.log('Preloading image:', image);
       });
     });
   }

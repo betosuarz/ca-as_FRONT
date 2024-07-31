@@ -6,6 +6,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { FloatingTabComponent } from './components/floating-tab/floating-tab.component';
 import { NavigationService } from './services/navigation.service';
 import { VideoComponent } from './components/video/video.component';
+import { ImagePreloaderService } from './services/image-preloader.service';
 
 @Component({
   selector: 'app-root',
@@ -18,11 +19,13 @@ export class AppComponent {
   title = 'canas_FRONT';
   constructor(
     private router: Router,
-    private navigationService: NavigationService
+    private navigationService: NavigationService,
+    private imagePreloaderService: ImagePreloaderService
   ) {}
 
   ngOnInit(): void {
     initFlowbite();
+    this.imagePreloaderService.preloadImages();
   }
 
   isHomePage(): boolean {

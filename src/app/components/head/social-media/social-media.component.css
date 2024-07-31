@@ -1,0 +1,7 @@
+a:hover {
+  color: #333;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(to right, #d4af37, #b8870b);
+  color: white;
+}

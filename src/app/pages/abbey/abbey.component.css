@@ -10,8 +10,19 @@ ul.menu-lat li a.active {
   color: white;
 }
 
+/* .img-left {
+  padding: 0px 0px 5px 0px;
+  height: auto;
+  width: full;
+}
 
-/* @media screen and (min-width: 640px) { */
+.img-right {
+  padding: 0px 0px 5px 0px;
+    height: auto;
+    width: full;
+} */
+
+@media screen and (min-width: 640px) {
   .img-left {
     padding: 0px 25px 5px 0px;
     height: 250px;
@@ -29,4 +40,4 @@ ul.menu-lat li a.active {
     height: 400px;
     width: auto;
   }
-/* } */
+}

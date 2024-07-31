@@ -48,3 +48,9 @@
   padding: 0.5rem;
   margin: 0.5rem auto;
 }
+
+@media (max-width: 768px) {
+  .close {
+    font-size: 0.7rem;
+  }
+}

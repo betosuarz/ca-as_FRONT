@@ -28,6 +28,6 @@ export const routes: Routes = [
   { path: 'return-policy', component: ReturnPolicyComponent },
   { path: 'legal-notice', component: LegalNoticeComponent },
   { path: 'faq', component: FaqComponent },
-  // { path: '**', redirectTo: 'home' },
+  { path: "redirectTo", pathMatch: "full" },
   { path: '**', component: NotFoundComponent },
 ];

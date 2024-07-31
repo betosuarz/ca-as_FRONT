@@ -7,6 +7,8 @@ import { Component, HostListener, AfterViewInit } from '@angular/core';
   styleUrl: './abbey.component.css'
 })
 export class AbbeyComponent implements AfterViewInit {
+
+
   ngAfterViewInit() {
     const observerOptions = {
       root: null,
@@ -17,6 +19,7 @@ export class AbbeyComponent implements AfterViewInit {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         const id = entry.target.getAttribute('id');
+        console.log(`Observing section: ${id}`);
         const navLink = document.querySelector(`a[href="abbey#${id}"]`);
         if (entry.isIntersecting) {
           navLink?.classList.add('active');

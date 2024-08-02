@@ -1,0 +1,41 @@
+[
+    {
+      "title": "Historia de la Abadía",
+      "paragraphs": [
+        "En 1169, el monasterio de Ayuela, de la Orden de San Benito, fue entregado a la Orden del Cister por los condes de Haro, dotándolo con tierras y viñedos. Las monjas se trasladaron a Cañas, buscando un entorno más aislado. El monasterio fue renombrado Santa María de Cañas y más tarde Santa María de San Salvador. La primera abadesa destacada fue María Urraca López de Haro y Ruiz de Castro, hija de los fundadores, quien impulsó significativamente el desarrollo del monasterio.",
+        "Durante los siglos XII y XIII, el monasterio de Cañas sufrió las inestabilidades políticas entre Castilla y Navarra. María Urraca, elegida abadesa en 1225, llevó a cabo importantes construcciones y aumentó las propiedades del convento. Bajo su liderazgo, el monasterio floreció, pero a finales del siglo XIII, la decadencia de la Casa de Haro afectó los recursos económicos del monasterio, deteniendo las obras. El siguiente impulso arquitectónico significativo no ocurrió hasta el siglo XVI con las abadesas Isabel Téllez de Leiba y Leonor de Osorio, quienes continuaron las construcciones y encargaron un retablo renacentista.",
+        "En el siglo XVIII, la abadesa Juana Ortiz de Zárate completó el claustro, el coro y la portada principal. La fase constructiva del monasterio se cerró en el siglo XIX, finalizando algunas dependencias y construyendo un ala para celdas. A lo largo de los siglos, el monasterio de Cañas experimentó varios periodos de crecimiento y estancamiento, reflejando los cambios políticos y económicos de la región."
+      ],
+      "imagePaths": [
+        "assets/abadia/1.jpg"
+      ]
+    },
+    {
+      "title": "La Iglesia",
+      "paragraphs": [
+        "El proyecto original de la iglesia del monasterio de Cañas preveía una construcción románica de tres naves, pero la influencia del estilo gótico, introducido por los talleres franceses a finales del siglo XII, cambió estos planes. La iglesia se construyó siguiendo principios cistercienses de austeridad y luminosidad, resultando en una estructura sencilla pero majestuosa, con tres ábsides y un crucero. La falta de recursos durante dos siglos detuvo las obras, hasta que en el siglo XVI se completó la nave central, abandonando definitivamente el diseño original de tres naves.",
+        "El templo actual mide treinta metros de largo y nueve de ancho en el crucero. La cabecera tiene tres ábsides, con el central de mayor tamaño y los laterales en semicírculo. La nave central se prolonga para alojar el coro de las monjas, mientras que la nave de la epístola se aboveda y se extiende hasta la portería. En el lado norte, la tercera nave se interrumpe en el crucero, donde se abre una puerta que comunica con el cementerio del monasterio, conocido como la 'puerta de los muertos'.",
+        "Los muros de la iglesia presentan hasta veinte vanos, con el alabastro proporcionando una luminosidad extraordinaria, especialmente en el ábside central. La decoración se centra en temas vegetales en capiteles y claves, en consonancia con la austeridad cisterciense, mientras que las nervaduras de la bóveda de crucería y los ramilletes de delgadas columnas destacan en los limpios paramentos. En la nave de la epístola, se pueden encontrar imágenes de animales enfrentados en el ábside.",
+        "La iglesia conserva un mobiliario modesto, con un 'Cristo crucificado' gótico del siglo XIV y una talla de madera policromada de \"Nuestra Señora de Cañas\" del siglo XIII. En el coro, se encuentra el retablo, la sillería y un fascistol, destacando la reubicación del retablo que permitió una mayor iluminación de la nave. La sillería del coro, con 26 asientos, data del siglo XVIII y fue restaurada a finales del siglo XX. En la nave central hay siete laudas sepulcrales de abadesas fallecidas en el siglo XVII."
+      ],
+      "imagePaths": [
+        "assets/abadia/2.1.jpg",
+        "assets/abadia/2.2.jpg"
+      ]
+    },
+    {
+      "title": "El Retablo Mayor",
+      "paragraphs": [
+        "El proyecto original de la iglesia del monasterio de Cañas preveía una construcción románica de tres naves, pero la influencia del estilo gótico, introducido por los talleres franceses a finales del siglo XII, cambió estos planes. La iglesia se construyó siguiendo principios cistercienses de austeridad y luminosidad, resultando en una estructura sencilla pero majestuosa, con tres ábsides y un crucero. La falta de recursos durante dos siglos detuvo las obras, hasta que en el siglo XVI se completó la nave central, abandonando definitivamente el diseño original de tres naves.",
+        "El templo actual mide treinta metros de largo y nueve de ancho en el crucero. La cabecera tiene tres ábsides, con el central de mayor tamaño y los laterales en semicírculo. La nave central se prolonga para alojar el coro de las monjas, mientras que la nave de la epístola se aboveda y se extiende hasta la portería. En el lado norte, la tercera nave se interrumpe en el crucero, donde se abre una puerta que comunica con el cementerio del monasterio, conocido como la 'puerta de los muertos'.",
+        "Los muros de la iglesia presentan hasta veinte vanos, con el alabastro proporcionando una luminosidad extraordinaria, especialmente en el ábside central. La decoración se centra en temas vegetales en capiteles y claves, en consonancia con la austeridad cisterciense, mientras que las nervaduras de la bóveda de crucería y los ramilletes de delgadas columnas destacan en los limpios paramentos. En la nave de la epístola, se pueden encontrar imágenes de animales enfrentados en el ábside.",
+        "La iglesia conserva un mobiliario modesto, con un 'Cristo crucificado' gótico del siglo XIV y una talla de madera policromada de \"Nuestra Señora de Cañas\" del siglo XIII. En el coro, se encuentra el retablo, la sillería y un fascistol, destacando la reubicación del retablo que permitió una mayor iluminación de la nave. La sillería del coro, con 26 asientos, data del siglo XVIII y fue restaurada a finales del siglo XX. En la nave central hay siete laudas sepulcrales de abadesas fallecidas en el siglo XVII."
+      ],
+      "imagePaths": [
+        "assets/abadia/3.1.jpg",
+        "assets/abadia/3.2.jpg"
+      ]
+    }
+
+  ]
+  

@@ -9,7 +9,7 @@
 
 <button data-drawer-target="default-sidebar" data-drawer-toggle="default-sidebar" aria-controls="default-sidebar"
   type="button"
-  class="inline-flex mt-20 items-center p-2 mx-1 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 fixed right-0">
+  class="inline-flex mt-20 items-center p-2 mx-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 fixed right-2">
   <span class="sr-only">Open sidebar</span>
   <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
     height="24" fill="none" viewBox="0 0 24 24">
@@ -17,10 +17,10 @@
   </svg>
 </button>
 
+<!--right margin 56 for large screens-->
+<div class="p-4 mx-2 sm: mr-10 lg:mr-56 sm:ml-15 mb-10">
 
-<div class="p-4 mx-2 sm:mr-64 sm:ml-15 mb-10">
-
-  <div id="history">
+  <article id="history">
     <h1 class="p-title text-3xl font-bold py-10">La Abadía de Cañas</h1>
     <h3 class="font-semibold text-lg text-gray-400 uppercase pb-3">Historia de la Abadía</h3>
     <div class="p-4 border-2 border-gray-100 rounded-md dark:border-gray-700">
@@ -50,8 +50,8 @@
         </p>
       </div>
     </div>
-  </div>
-  <div id="church">
+</article>
+  <article id="church">
     <h3 class="font-semibold text-lg text-gray-400 uppercase pb-3 mt-10">La Iglesia</h3>
     <div class="p-4 border-2 border-gray-100 rounded-md dark:border-gray-700">
       <div>
@@ -124,8 +124,8 @@
           fórmula medieval.</p>
       </div>
     </div>
-  </div>
-  <div id="cloister">
+</article>
+  <article id="cloister">
     <h3 class="font-semibold text-lg text-gray-400 uppercase pb-3 mt-10">El Claustro</h3>
     <div class="p-4 border-2 border-gray-100 rounded-md dark:border-gray-700">
       <div>
@@ -155,8 +155,8 @@
           central que estuvo cegada durante mucho tiempo, evidenciando la rica narrativa de su evolución histórica.</p>
       </div>
     </div>
-  </div>
-  <div id="chapter-room">
+</article>
+  <article id="chapter-room">
     <h3 class="font-semibold text-lg text-gray-400 uppercase pb-3 mt-10">Sala Capitular</h3>
     <div class="p-4 border-2 border-gray-100 rounded-md dark:border-gray-700">
       <div>
@@ -188,8 +188,8 @@
           la importancia de la beata y su legado dentro de la comunidad monástica.</p>
       </div>
     </div>
-  </div>
-  <div id="relic-room">
+</article>
+  <article id="relic-room">
     <h3 class="font-semibold text-lg text-gray-400 uppercase pb-3 mt-10">Sala de las Reliquias</h3>
     <div class="p-4 border-2 border-gray-100 rounded-md dark:border-gray-700">
       <div>
@@ -225,8 +225,8 @@
           representan importantes logros artísticos y estéticos del monasterio.</p>
       </div>
     </div>
-  </div>
-  <div id="museum-storage">
+</article>
+  <article id="museum-storage">
     <h3 class="font-semibold text-lg text-gray-400 uppercase pb-3 mt-10">Cilla-Museo</h3>
     <div class="p-4 border-2 border-gray-100 rounded-md dark:border-gray-700">
       <div>
@@ -262,9 +262,9 @@
           Trinidad”, un mediorelieve de finales del siglo XVI.</p>
       </div>
     </div>
-  </div>
+</article>
 
-  <aside id="default-sidebar" class="fixed top-0 right-0 mt-20 transition-transform translate-x-full sm:translate-x-0"
+  <aside id="default-sidebar" class="fixed top-0 right-0 mt-20 transition-transform translate-x-full lg:translate-x-0"
     aria-label="Sidebar">
     <div
       class="fixed top-10 w-full right-0 right-0 px-7 pt-10 pb-7 sm:w-64 sm:pt-0 bg-white dark:bg-gray-800 rounded-md shadow shadow-xl sm:shadow-none">
@@ -286,7 +286,7 @@
         </li>
         <li>
           <a href="abbey#church"
-            class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group active">
+            class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
             <svg
               class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
               aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
@@ -294,7 +294,6 @@
               <path stroke="currentColor" stroke-linecap="round" stroke-width="2"
                 d="M3 21h18M4 18h16M6 10v8m4-8v8m4-8v8m4-8v8M4 9.5v-.955a1 1 0 0 1 .458-.84l7-4.52a1 1 0 0 1 1.084 0l7 4.52a1 1 0 0 1 .458.84V9.5a.5.5 0 0 1-.5.5h-15a.5.5 0 0 1-.5-.5Z" />
             </svg>
-
             <span class="flex-1 ms-3 whitespace-nowrap">La Iglesia</span>
           </a>
         </li>
@@ -345,6 +344,5 @@
       </ul>
     </div>
   </aside>
-
 
 </div>

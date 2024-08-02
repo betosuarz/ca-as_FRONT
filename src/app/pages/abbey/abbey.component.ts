@@ -29,7 +29,7 @@ export class AbbeyComponent implements AfterViewInit {
       });
     }, observerOptions);
 
-    document.querySelectorAll('div[id]').forEach((section) => {
+    document.querySelectorAll('article[id]').forEach((section) => {
       observer.observe(section);
     });
   }

@@ -6,7 +6,7 @@
     <li><a href="#section3" (click)="scrollToSection($event, 'section3')">Section 3</a></li>
   </ul>
 </div> -->
-
+<!--right-2 position of the arrow with mr:10 for small screens in container div-->
 <button data-drawer-target="default-sidebar" data-drawer-toggle="default-sidebar" aria-controls="default-sidebar"
   type="button"
   class="inline-flex mt-20 items-center p-2 mx-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 fixed right-2">
@@ -18,7 +18,7 @@
 </button>
 
 <!--right margin 56 for large screens-->
-<div class="p-4 mx-2 sm: mr-10 lg:mr-56 sm:ml-15 mb-10">
+<div class="p-4 mx-2 sm:mr-10 lg:mr-56 sm:ml-15 mb-10">
 
   <article id="history">
     <h1 class="p-title text-3xl font-bold py-10">La Abadía de Cañas</h1>
@@ -263,11 +263,10 @@
       </div>
     </div>
 </article>
-
-  <aside id="default-sidebar" class="fixed top-0 right-0 mt-20 transition-transform translate-x-full lg:translate-x-0"
-    aria-label="Sidebar">
-    <div
-      class="fixed top-10 w-full right-0 right-0 px-7 pt-10 pb-7 sm:w-64 sm:pt-0 bg-white dark:bg-gray-800 rounded-md shadow shadow-xl sm:shadow-none">
+<!--top-0-->
+<!--z-40-->
+  <aside id="default-sidebar" class="fixed mt-20 right-0 transition-transform translate-x-full lg:translate-x-0 z-40" aria-label="Sidebar">
+    <div class="fixed w-full right-0 px-7 pt-10 pb-7 sm:w-64 sm:pt-0 bg-white dark:bg-gray-800 rounded-md shadow shadow-xl sm:shadow-none">
       <h2 class="font-medium text-gray-500 text-sm pt-3 pb-5">EN ESTE ARTÍCULO</h2>
       <ul class="menu-lat ps-2 space-y-2 font-medium">
         <li>

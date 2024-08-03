@@ -1,12 +1,3 @@
-<!-- <div class="sidebar">
-  <h2>In this article</h2>
-  <ul>
-    <li><a href="#section1" (click)="scrollToSection($event, 'section1')">Section 1</a></li>
-    <li><a href="#section2" (click)="scrollToSection($event, 'section2')">Section 2</a></li>
-    <li><a href="#section3" (click)="scrollToSection($event, 'section3')">Section 3</a></li>
-  </ul>
-</div> -->
-<!--right-2 position of the arrow with mr:10 for small screens in container div-->
 <button data-drawer-target="default-sidebar" data-drawer-toggle="default-sidebar" aria-controls="default-sidebar"
   type="button"
   class="inline-flex mt-20 items-center p-2 mx-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 fixed right-2">
@@ -17,331 +8,382 @@
   </svg>
 </button>
 
-<!--right margin 56 for large screens-->
-<div class="p-4 mx-2 sm:mr-10 lg:mr-56 sm:ml-15 mb-10">
 
-  <article id="history">
-    <h1 class="p-title text-3xl font-bold py-10">La Abadía de Cañas</h1>
-    <h3 class="font-semibold text-lg text-gray-400 uppercase pb-3">Historia de la Abadía</h3>
-    <div class="p-4 border-2 border-gray-100 rounded-md dark:border-gray-700">
-      <div>
-        <img src="./../../../assets/abadia/1.jpg" alt="Cañas Exterior"
-          class="img-left w-full float-none sm:float-left sm:w-1/2 mt-0 sm:mt-2 py-4">
-        <p class="text-justify">En 1169, el monasterio de Ayuela, de la Orden de San Benito, fue entregado a la Orden
-          del
-          Cister por los condes de Haro, dotándolo con tierras y viñedos. Las monjas se trasladaron a Cañas, buscando un
-          entorno más aislado. El monasterio fue renombrado Santa María de Cañas y más tarde Santa María de San
-          Salvador.
-          La primera abadesa destacada fue María Urraca López de Haro y Ruiz de Castro, hija de los fundadores, quien
-          impulsó significativamente el desarrollo del monasterio.</p>
-        <p class="pt-2 text-justify">Durante los siglos XII y XIII, el monasterio de Cañas sufrió las inestabilidades
-          políticas entre Castilla y Navarra. María Urraca, elegida abadesa en 1225, llevó a cabo importantes
-          construcciones y aumentó las propiedades del convento. Bajo su liderazgo, el monasterio floreció, pero a
-          finales
-          del siglo XIII, la decadencia de la Casa de Haro afectó los recursos económicos del monasterio, deteniendo las
-          obras. El siguiente impulso arquitectónico significativo no ocurrió hasta el siglo XVI con las abadesas Isabel
-          Téllez de Leiba y Leonor de Osorio, quienes continuaron las construcciones y encargaron un retablo
-          renacentista.
-        </p>
-        <p class="pt-2 text-justify">En el siglo XVIII, la abadesa Juana Ortiz de Zárate completó el claustro, el coro y
-          la portada principal. La fase constructiva del monasterio se cerró en el siglo XIX, finalizando algunas
-          dependencias y construyendo un ala para celdas. A lo largo de los siglos, el monasterio de Cañas experimentó
-          varios periodos de crecimiento y estancamiento, reflejando los cambios políticos y económicos de la región.
-        </p>
+<div class="flex mb-10">
+  <!-- Contenido histórico e imágenes de la primera columna -->
+  <div class="ml-5 mb-10 mr-12 lg:w-[66%] lg:ml-[10%] lg:mr-[9%]">
+    <article id="history">
+      <h1 class="p-title text-3xl font-bold py-10">La Abadía de Cañas</h1>
+      <h3 class="font-semibold text-lg text-gray-400 uppercase pb-3">Historia de la Abadía</h3>
+      <div class="p-4 border-2 border-gray-100 rounded-md dark:border-gray-700">
+        <div>
+          <img src="./../../../assets/abadia/1.jpg" alt="Cañas Exterior"
+            class="img-left w-full float-none sm:float-left sm:w-1/2 mt-0 sm:mt-2 py-4">
+          <p class="text-justify">En 1169, el monasterio de Ayuela, de la Orden de San Benito, fue entregado a la Orden
+            del
+            Cister por los condes de Haro, dotándolo con tierras y viñedos. Las monjas se trasladaron a Cañas, buscando
+            un
+            entorno más aislado. El monasterio fue renombrado Santa María de Cañas y más tarde Santa María de San
+            Salvador.
+            La primera abadesa destacada fue María Urraca López de Haro y Ruiz de Castro, hija de los fundadores, quien
+            impulsó significativamente el desarrollo del monasterio.</p>
+          <p class="pt-2 text-justify">Durante los siglos XII y XIII, el monasterio de Cañas sufrió las inestabilidades
+            políticas entre Castilla y Navarra. María Urraca, elegida abadesa en 1225, llevó a cabo importantes
+            construcciones y aumentó las propiedades del convento. Bajo su liderazgo, el monasterio floreció, pero a
+            finales
+            del siglo XIII, la decadencia de la Casa de Haro afectó los recursos económicos del monasterio, deteniendo
+            las
+            obras. El siguiente impulso arquitectónico significativo no ocurrió hasta el siglo XVI con las abadesas
+            Isabel
+            Téllez de Leiba y Leonor de Osorio, quienes continuaron las construcciones y encargaron un retablo
+            renacentista.
+          </p>
+          <p class="pt-2 text-justify">En el siglo XVIII, la abadesa Juana Ortiz de Zárate completó el claustro, el coro
+            y
+            la portada principal. La fase constructiva del monasterio se cerró en el siglo XIX, finalizando algunas
+            dependencias y construyendo un ala para celdas. A lo largo de los siglos, el monasterio de Cañas experimentó
+            varios periodos de crecimiento y estancamiento, reflejando los cambios políticos y económicos de la región.
+          </p>
+        </div>
       </div>
-    </div>
-</article>
-  <article id="church">
-    <h3 class="font-semibold text-lg text-gray-400 uppercase pb-3 mt-10">La Iglesia</h3>
-    <div class="p-4 border-2 border-gray-100 rounded-md dark:border-gray-700">
-      <div>
-        <img src="./../../../assets/abadia/2.1.jpg" alt="Cañas Exterior"
-          class="img-right float-none sm:float-right sm:w-1/2 mt-0 sm:mt-2 py-4">
-        <p class="text-justify">El proyecto original de la iglesia del monasterio de Cañas preveía una construcción
-          románica de tres naves, pero la influencia del estilo gótico, introducido por los talleres franceses a finales
-          del siglo XII, cambió estos planes. La iglesia se construyó siguiendo principios cistercienses de austeridad y
-          luminosidad, resultando en una estructura sencilla pero majestuosa, con tres ábsides y un crucero. La falta de
-          recursos durante dos siglos detuvo las obras, hasta que en el siglo XVI se completó la nave central,
-          abandonando
-          definitivamente el diseño original de tres naves.</p>
-        <img src="./../../../assets/abadia/2.2.jpg" alt="Imagen 3"
-          class="img-left float-none sm:float-left sm:w-1/2 mt-1 sm:mt-5 py-4">
-        <p class="pt-2 text-justify">El templo actual mide treinta metros de largo y nueve de ancho en el crucero. La
-          cabecera tiene tres ábsides, con el central de mayor tamaño y los laterales en semicírculo. La nave central se
-          prolonga para alojar el coro de las monjas, mientras que la nave de la epístola se aboveda y se extiende hasta
-          la portería. En el lado norte, la tercera nave se interrumpe en el crucero, donde se abre una puerta que
-          comunica con el cementerio del monasterio, conocido como la "puerta de los muertos".</p>
-        <p class="pt-2 text-justify">Los muros de la iglesia presentan hasta veinte vanos, con el alabastro
-          proporcionando
-          una luminosidad extraordinaria, especialmente en el ábside central. La decoración se centra en temas vegetales
-          en capiteles y claves, en consonancia con la austeridad cisterciense, mientras que las nervaduras de la bóveda
-          de crucería y los ramilletes de delgadas columnas destacan en los limpios paramentos. En la nave de la
-          epístola,
-          se pueden encontrar imágenes de animales enfrentados en el ábside.</p>
-        <p class="pt-2 text-justify">La iglesia conserva un mobiliario modesto, con un "Cristo crucificado" gótico del
-          siglo XIV y una talla de madera policromada de "Nuestra Señora de Cañas" del siglo XIII. En el coro, se
-          encuentra el retablo, la sillería y un fascistol, destacando la reubicación del retablo que permitió una mayor
-          iluminación de la nave. La sillería del coro, con 26 asientos, data del siglo XVIII y fue restaurada a finales
-          del siglo XX. En la nave central hay siete laudas sepulcrales de abadesas fallecidas en el siglo XVII.</p>
-        <!-- <h3 id="altarpiece" class="font-semibold text-lg text-gray-400 uppercase pb-3 mt-10">El Retablo Mayor</h3> -->
-        <h4 class="font-semibold text-lg text-gray-400 uppercase pb-3 mt-10">El Retablo Mayor</h4>
-        <img src="./../../../assets/abadia/3.1.jpg" alt="Imagen 4"
-          class="img-tall float-none sm:float-right sm:w-1/2 mt-0 sm:mt-4 py-4">
-        <p class="pt-2 text-justify">El ajuar mueble de la iglesia es muy reducido, pero algunas piezas son de
-          excepcional
-          calidad, como el "Cristo crucificado" en el ábside, "Nuestra Señora de Cañas" en la nave de la epístola, una
-          talla de "Santo Domingo de Silos" en la misma nave, y la sillería del coro. Destaca especialmente el retablo
-          renacentista, considerado uno de los mejores de La Rioja, que se trasladó en 1975 al pie de la iglesia desde
-          su
-          ubicación original en el ábside.</p>
-        <p class="pt-2 text-justify">La abadesa Leonor de Osorio encargó el retablo a principios del siglo XVI. Se cree
-          que en su realización participaron el imaginero Guillen de Holanda y los pintores Andrés de Melgar y Alonso
-          Gallego. El retablo, concebido como tríptico cerrable, combina escultura en la parte central y pintura en los
-          lados abatibles, con la vida de la Virgen como temática central. Está estructurado en siete calles verticales,
-          tres pisos, un ático horizontal y el banco, y fue restaurado a finales del siglo XX.</p>
-        <img src="./../../../assets/abadia/3.2.jpg" alt="Imagen 5"
-          class="img-left float-none sm:float-left sm:w-1/2 mt-1 sm:mt-5 py-4">
-        <p class="pt-2 text-justify">Los bajorrelieves del banco representan, de izquierda a derecha, la "Última Cena",
-          "San Pedro y San Pablo", el Sagrario en el centro, "San Juan y San Andrés" y la "Flagelación de Cristo". En
-          las
-          tres calles centrales destinadas a la escultura, se encuentran en el primer piso la "Virgen" flanqueada por
-          "San
-          Benito" y "San Bernardo". En el segundo piso, "La Adoración de los Reyes", "San Juan Bautista" y "San Miguel".
-          En el tercer piso, la "Asunción de la Virgen" rodeada por "Santa Catalina" y "María Magdalena".</p>
-        <p class="pt-2 text-justify">En el ático, un "Calvario" muestra a la Virgen y San Juan al pie de Cristo
-          crucificado. Las pinturas en las cuatro calles laterales representan santos y escenas. En el primer piso
-          aparecen "la Misa de San Gregorio", "la Anunciación", "la Visitación" y "San Bernardo" junto a una abadesa,
-          posiblemente Leonor de Osorio. En el segundo piso, "San Sebastián", "el abrazo de San Joaquín y Santa Ana",
-          "la
-          huida a Egipto" y "San Roque". En el tercer piso, "Santiago Peregrino", "la Dormición de la Virgen", "el
-          nacimiento de San Juan Bautista" y un santo obispo, posiblemente San Nicolás.</p>
-        <p class="pt-2 text-justify">Finalmente, en el ático, a la izquierda del calvario, se encuentran un "Ecce Homo"
-          y
-          un "San Jerónimo", y a la derecha, la "Santísima Trinidad" y "la Piedad". La Santísima Trinidad muestra al
-          Padre
-          Eterno sujetando la cruz y al Espíritu Santo representado por una paloma sobre la cabeza de Cristo, siguiendo
-          la
-          fórmula medieval.</p>
+    </article>
+    <article id="church">
+      <h3 class="font-semibold text-lg text-gray-400 uppercase pb-3 mt-10">La Iglesia</h3>
+      <div class="p-4 border-2 border-gray-100 rounded-md dark:border-gray-700">
+        <div>
+          <img src="./../../../assets/abadia/2.1.jpg" alt="Cañas Exterior"
+            class="img-right float-none sm:float-right sm:w-1/2 mt-0 sm:mt-2 py-4">
+          <p class="text-justify">El proyecto original de la iglesia del monasterio de Cañas preveía una construcción
+            románica de tres naves, pero la influencia del estilo gótico, introducido por los talleres franceses a
+            finales
+            del siglo XII, cambió estos planes. La iglesia se construyó siguiendo principios cistercienses de austeridad
+            y
+            luminosidad, resultando en una estructura sencilla pero majestuosa, con tres ábsides y un crucero. La falta
+            de
+            recursos durante dos siglos detuvo las obras, hasta que en el siglo XVI se completó la nave central,
+            abandonando
+            definitivamente el diseño original de tres naves.</p>
+          <img src="./../../../assets/abadia/2.2.jpg" alt="Imagen 3"
+            class="img-left float-none sm:float-left sm:w-1/2 mt-1 sm:mt-5 py-4">
+          <p class="pt-2 text-justify">El templo actual mide treinta metros de largo y nueve de ancho en el crucero. La
+            cabecera tiene tres ábsides, con el central de mayor tamaño y los laterales en semicírculo. La nave central
+            se
+            prolonga para alojar el coro de las monjas, mientras que la nave de la epístola se aboveda y se extiende
+            hasta
+            la portería. En el lado norte, la tercera nave se interrumpe en el crucero, donde se abre una puerta que
+            comunica con el cementerio del monasterio, conocido como la "puerta de los muertos".</p>
+          <p class="pt-2 text-justify">Los muros de la iglesia presentan hasta veinte vanos, con el alabastro
+            proporcionando
+            una luminosidad extraordinaria, especialmente en el ábside central. La decoración se centra en temas
+            vegetales
+            en capiteles y claves, en consonancia con la austeridad cisterciense, mientras que las nervaduras de la
+            bóveda
+            de crucería y los ramilletes de delgadas columnas destacan en los limpios paramentos. En la nave de la
+            epístola,
+            se pueden encontrar imágenes de animales enfrentados en el ábside.</p>
+          <p class="pt-2 text-justify">La iglesia conserva un mobiliario modesto, con un "Cristo crucificado" gótico del
+            siglo XIV y una talla de madera policromada de "Nuestra Señora de Cañas" del siglo XIII. En el coro, se
+            encuentra el retablo, la sillería y un fascistol, destacando la reubicación del retablo que permitió una
+            mayor
+            iluminación de la nave. La sillería del coro, con 26 asientos, data del siglo XVIII y fue restaurada a
+            finales
+            del siglo XX. En la nave central hay siete laudas sepulcrales de abadesas fallecidas en el siglo XVII.</p>
+          <!-- <h3 id="altarpiece" class="font-semibold text-lg text-gray-400 uppercase pb-3 mt-10">El Retablo Mayor</h3> -->
+          <h4 class="font-semibold text-lg text-gray-400 uppercase pb-3 mt-10">El Retablo Mayor</h4>
+          <img src="./../../../assets/abadia/3.1.jpg" alt="Imagen 4"
+            class="img-tall float-none sm:float-right sm:w-1/2 mt-0 sm:mt-4 py-4">
+          <p class="pt-2 text-justify">El ajuar mueble de la iglesia es muy reducido, pero algunas piezas son de
+            excepcional
+            calidad, como el "Cristo crucificado" en el ábside, "Nuestra Señora de Cañas" en la nave de la epístola, una
+            talla de "Santo Domingo de Silos" en la misma nave, y la sillería del coro. Destaca especialmente el retablo
+            renacentista, considerado uno de los mejores de La Rioja, que se trasladó en 1975 al pie de la iglesia desde
+            su
+            ubicación original en el ábside.</p>
+          <p class="pt-2 text-justify">La abadesa Leonor de Osorio encargó el retablo a principios del siglo XVI. Se
+            cree
+            que en su realización participaron el imaginero Guillen de Holanda y los pintores Andrés de Melgar y Alonso
+            Gallego. El retablo, concebido como tríptico cerrable, combina escultura en la parte central y pintura en
+            los
+            lados abatibles, con la vida de la Virgen como temática central. Está estructurado en siete calles
+            verticales,
+            tres pisos, un ático horizontal y el banco, y fue restaurado a finales del siglo XX.</p>
+          <img src="./../../../assets/abadia/3.2.jpg" alt="Imagen 5"
+            class="img-left float-none sm:float-left sm:w-1/2 mt-1 sm:mt-5 py-4">
+          <p class="pt-2 text-justify">Los bajorrelieves del banco representan, de izquierda a derecha, la "Última
+            Cena",
+            "San Pedro y San Pablo", el Sagrario en el centro, "San Juan y San Andrés" y la "Flagelación de Cristo". En
+            las
+            tres calles centrales destinadas a la escultura, se encuentran en el primer piso la "Virgen" flanqueada por
+            "San
+            Benito" y "San Bernardo". En el segundo piso, "La Adoración de los Reyes", "San Juan Bautista" y "San
+            Miguel".
+            En el tercer piso, la "Asunción de la Virgen" rodeada por "Santa Catalina" y "María Magdalena".</p>
+          <p class="pt-2 text-justify">En el ático, un "Calvario" muestra a la Virgen y San Juan al pie de Cristo
+            crucificado. Las pinturas en las cuatro calles laterales representan santos y escenas. En el primer piso
+            aparecen "la Misa de San Gregorio", "la Anunciación", "la Visitación" y "San Bernardo" junto a una abadesa,
+            posiblemente Leonor de Osorio. En el segundo piso, "San Sebastián", "el abrazo de San Joaquín y Santa Ana",
+            "la
+            huida a Egipto" y "San Roque". En el tercer piso, "Santiago Peregrino", "la Dormición de la Virgen", "el
+            nacimiento de San Juan Bautista" y un santo obispo, posiblemente San Nicolás.</p>
+          <p class="pt-2 text-justify">Finalmente, en el ático, a la izquierda del calvario, se encuentran un "Ecce
+            Homo"
+            y
+            un "San Jerónimo", y a la derecha, la "Santísima Trinidad" y "la Piedad". La Santísima Trinidad muestra al
+            Padre
+            Eterno sujetando la cruz y al Espíritu Santo representado por una paloma sobre la cabeza de Cristo,
+            siguiendo
+            la
+            fórmula medieval.</p>
+        </div>
       </div>
-    </div>
-</article>
-  <article id="cloister">
-    <h3 class="font-semibold text-lg text-gray-400 uppercase pb-3 mt-10">El Claustro</h3>
-    <div class="p-4 border-2 border-gray-100 rounded-md dark:border-gray-700">
-      <div>
-        <img src="./../../../assets/abadia/4.jpg" alt="Imagen 6"
-          class="img-left float-none sm:float-left sm:w-1/2 mt-0 sm:mt-2 py-4">
-        <p class="text-justify">El claustro del monasterio refleja diversas etapas constructivas desde el siglo XII
-          hasta
-          el XVIII, comenzando bajo el gobierno de la beata Urraca López de Haro. Su edificación muestra una variedad de
-          estilos arquitectónicos y materiales que evidencian las condiciones económicas y los patrocinios disponibles
-          en
-          cada fase de construcción.
-        </p>
-        <p class="pt-2 text-justify">El complejo presenta muros interiores románicos, portadas góticas y una arquería
-          exterior de medio punto. Los materiales utilizados van desde sillares canteados hasta aparejos más toscos, con
-          ladrillos en la segunda planta que cierran los arcos originales, creando vanos cuadrangulares. El suelo de la
-          galería, aunque solo parcialmente conservado, destaca por sus dibujos radiales en piedra.</p>
-        <p class="pt-2 text-justify">Entre las portadas más notables se encuentra la de la sala capitular en el ala
-          este,
-          con tres arcos ojivales y dos ventanales. En el ala norte, se abren portadas en cada extremo, con una que
-          permite el acceso al claustro y otra que da a la nave de la epístola, ambas con pórticos decorados con dientes
-          de león y capiteles vegetales, destacando la figura de dos frailes leyendo en uno de los capiteles.</p>
-        <p class="pt-2 text-justify">El ala este incluye además una puerta sencilla hacia la sacristía y otra portada
-          con
-          doble arquivolta que conducía a un tramo de escaleras. En el ala sur, cuatro puertas daban acceso a varias
-          dependencias como el refectorio, la cocina y el calefactorio, además de una entrada al museo de reliquias del
-          monasterio. Finalmente, en el ala oeste, que albergaba la cilla y ahora es un museo, hay una única puerta
-          central que estuvo cegada durante mucho tiempo, evidenciando la rica narrativa de su evolución histórica.</p>
+    </article>
+    <article id="cloister">
+      <h3 class="font-semibold text-lg text-gray-400 uppercase pb-3 mt-10">El Claustro</h3>
+      <div class="p-4 border-2 border-gray-100 rounded-md dark:border-gray-700">
+        <div>
+          <img src="./../../../assets/abadia/4.jpg" alt="Imagen 6"
+            class="img-left float-none sm:float-left sm:w-1/2 mt-0 sm:mt-2 py-4">
+          <p class="text-justify">El claustro del monasterio refleja diversas etapas constructivas desde el siglo XII
+            hasta
+            el XVIII, comenzando bajo el gobierno de la beata Urraca López de Haro. Su edificación muestra una variedad
+            de
+            estilos arquitectónicos y materiales que evidencian las condiciones económicas y los patrocinios disponibles
+            en
+            cada fase de construcción.
+          </p>
+          <p class="pt-2 text-justify">El complejo presenta muros interiores románicos, portadas góticas y una arquería
+            exterior de medio punto. Los materiales utilizados van desde sillares canteados hasta aparejos más toscos,
+            con
+            ladrillos en la segunda planta que cierran los arcos originales, creando vanos cuadrangulares. El suelo de
+            la
+            galería, aunque solo parcialmente conservado, destaca por sus dibujos radiales en piedra.</p>
+          <p class="pt-2 text-justify">Entre las portadas más notables se encuentra la de la sala capitular en el ala
+            este,
+            con tres arcos ojivales y dos ventanales. En el ala norte, se abren portadas en cada extremo, con una que
+            permite el acceso al claustro y otra que da a la nave de la epístola, ambas con pórticos decorados con
+            dientes
+            de león y capiteles vegetales, destacando la figura de dos frailes leyendo en uno de los capiteles.</p>
+          <p class="pt-2 text-justify">El ala este incluye además una puerta sencilla hacia la sacristía y otra portada
+            con
+            doble arquivolta que conducía a un tramo de escaleras. En el ala sur, cuatro puertas daban acceso a varias
+            dependencias como el refectorio, la cocina y el calefactorio, además de una entrada al museo de reliquias
+            del
+            monasterio. Finalmente, en el ala oeste, que albergaba la cilla y ahora es un museo, hay una única puerta
+            central que estuvo cegada durante mucho tiempo, evidenciando la rica narrativa de su evolución histórica.
+          </p>
+        </div>
       </div>
-    </div>
-</article>
-  <article id="chapter-room">
-    <h3 class="font-semibold text-lg text-gray-400 uppercase pb-3 mt-10">Sala Capitular</h3>
-    <div class="p-4 border-2 border-gray-100 rounded-md dark:border-gray-700">
-      <div>
-        <img src="./../../../assets/abadia/5.1.jpg" alt="Imagen 7"
-          class="img-right float-none sm:float-right sm:w-1/2 mt-0 sm:mt-2 py-4">
-        <p class="text-justify">La Sala Capitular del monasterio de Cañas, construida en la segunda mitad del siglo
-          XIII, se encuentra cerca del claustro, facilitando la comunicación con el templo. Destinada a reuniones de la
-          comunidad monacal, también se convirtió en panteón, albergando el sarcófago de la beata Urraca López de Haro y
-          las laudas sepulcrales de cuatro abadesas. La fachada de la sala tiene una portada y dos ventanales
-          simétricos,
-          todos con arcos apuntados y decoraciones vegetales. Una curiosidad es la figura del “eterno borracho”, una
-          cabeza humana invertida en un ángulo del pórtico.</p>
-        <img src="./../../../assets/abadia/5.2.jpg" alt="Imagen 8"
-          class="img-left float-none sm:float-left sm:w-1/2 mt-1 sm:mt-5 py-4">
-        <p class="pt-2 text-justify">El interior de la sala se divide en cuatro bóvedas sostenidas por una columna
-          central
-          y columnillas adosadas. La decoración sigue siendo vegetal, simbolizando el Misterio de la Santísima Trinidad,
-          con tres elementos en el acceso que confluyen en la columna central. Este diseño arquitectónico refuerza la
-          conexión espiritual y simbólica dentro del espacio monacal.</p>
-        <p class="pt-2 text-justify">El sarcófago de la Beata Urraca López de Haro, una de las joyas del monasterio,
-          probablemente fue construido entre los siglos XIII y XIV. Consta de una tapa y una caja, sustentadas sobre
-          ménsulas que representan animales. La tapa muestra a la beata con sus atributos abaciales, flanqueada por
-          ángeles y novicias. En la caja, hay escenas de su vida, su ascenso al cielo, y su entierro, representando un
-          total de veintiséis personajes, incluidos obispos, abades, acólitos, damas y frailes.</p>
-        <p class="pt-2 text-justify">El cuerpo de la Beata Urraca López de Haro ha permanecido incorrupto, confirmado en
-          cuatro ocasiones entre 1898 y 1989. A cada lado del sepulcro, se encuentran las laudas sepulcrales de cuatro
-          abadesas del monasterio, con báculos labrados, que flanquean el sarcófago de la beata. Esta disposición
-          subraya
-          la importancia de la beata y su legado dentro de la comunidad monástica.</p>
+    </article>
+    <article id="chapter-room">
+      <h3 class="font-semibold text-lg text-gray-400 uppercase pb-3 mt-10">Sala Capitular</h3>
+      <div class="p-4 border-2 border-gray-100 rounded-md dark:border-gray-700">
+        <div>
+          <img src="./../../../assets/abadia/5.1.jpg" alt="Imagen 7"
+            class="img-right float-none sm:float-right sm:w-1/2 mt-0 sm:mt-2 py-4">
+          <p class="text-justify">La Sala Capitular del monasterio de Cañas, construida en la segunda mitad del siglo
+            XIII, se encuentra cerca del claustro, facilitando la comunicación con el templo. Destinada a reuniones de
+            la
+            comunidad monacal, también se convirtió en panteón, albergando el sarcófago de la beata Urraca López de Haro
+            y
+            las laudas sepulcrales de cuatro abadesas. La fachada de la sala tiene una portada y dos ventanales
+            simétricos,
+            todos con arcos apuntados y decoraciones vegetales. Una curiosidad es la figura del “eterno borracho”, una
+            cabeza humana invertida en un ángulo del pórtico.</p>
+          <img src="./../../../assets/abadia/5.2.jpg" alt="Imagen 8"
+            class="img-left float-none sm:float-left sm:w-1/2 mt-1 sm:mt-5 py-4">
+          <p class="pt-2 text-justify">El interior de la sala se divide en cuatro bóvedas sostenidas por una columna
+            central
+            y columnillas adosadas. La decoración sigue siendo vegetal, simbolizando el Misterio de la Santísima
+            Trinidad,
+            con tres elementos en el acceso que confluyen en la columna central. Este diseño arquitectónico refuerza la
+            conexión espiritual y simbólica dentro del espacio monacal.</p>
+          <p class="pt-2 text-justify">El sarcófago de la Beata Urraca López de Haro, una de las joyas del monasterio,
+            probablemente fue construido entre los siglos XIII y XIV. Consta de una tapa y una caja, sustentadas sobre
+            ménsulas que representan animales. La tapa muestra a la beata con sus atributos abaciales, flanqueada por
+            ángeles y novicias. En la caja, hay escenas de su vida, su ascenso al cielo, y su entierro, representando un
+            total de veintiséis personajes, incluidos obispos, abades, acólitos, damas y frailes.</p>
+          <p class="pt-2 text-justify">El cuerpo de la Beata Urraca López de Haro ha permanecido incorrupto, confirmado
+            en
+            cuatro ocasiones entre 1898 y 1989. A cada lado del sepulcro, se encuentran las laudas sepulcrales de cuatro
+            abadesas del monasterio, con báculos labrados, que flanquean el sarcófago de la beata. Esta disposición
+            subraya
+            la importancia de la beata y su legado dentro de la comunidad monástica.</p>
+        </div>
       </div>
-    </div>
-</article>
-  <article id="relic-room">
-    <h3 class="font-semibold text-lg text-gray-400 uppercase pb-3 mt-10">Sala de las Reliquias</h3>
-    <div class="p-4 border-2 border-gray-100 rounded-md dark:border-gray-700">
-      <div>
-        <img src="./../../../assets/abadia/6.1.jpg" alt="Imagen 9"
-          class="img-right float-none sm:float-right sm:w-1/2 mt-0 sm:mt-2 py-4">
-        <p class="text-justify">Las reliquias, consideradas vestigios de épocas pasadas, incluyen partes del cuerpo
-          de santos y objetos que han tocado a estos, y han sido objeto de veneración desde la Edad Media. A lo largo de
-          la historia, la Iglesia ha valorado las reliquias por su capacidad para transmitir virtud y atraer peregrinos.
-          Sin embargo, a partir de las Cruzadas, el culto a las reliquias se volvió un negocio, llevando a la Iglesia a
-          regular la autenticidad de las mismas con documentos llamados "auténticas", especialmente durante el Concilio
-          de
-          Trento para frenar el mercadeo excesivo.</p>
-        <img src="./../../../assets/abadia/6.2.jpg" alt="Imagen 10"
-          class="img-left float-none sm:float-left sm:w-1/2 mt-1 sm:mt-5 py-4">
-        <p class="pt-2 text-justify">El monasterio de Cañas posee una extensa colección de reliquias, aunque no fue un
-          destino importante de peregrinación. Los relicarios que albergan estas reliquias, a menudo joyas de
-          orfebrería,
-          datan principalmente del siglo XVI en adelante. La colección se clasifica en cuatro periodos: medieval,
-          XV-XVII,
-          XVIII-XIX, y siglo XX, cada uno reflejando distintas fases de adquisición y autentificación. La colección
-          medieval incluye reliquias aportadas por los López de Haro y otras donaciones, mientras que las de los siglos
-          XV-XVII incluyen piezas con “auténticas” documentadas.</p>
-        <p class="pt-2 text-justify">Entre las reliquias destacadas del monasterio se encuentran la canilla de Santa
-          Engracia y un hueso de los mártires de Cardeña, ambas con certificados de autenticidad. También se conserva
-          una
-          reproducción del clavo de la crucifixión, hecho para imitar al original en Roma. Entre las reliquias más
-          inusuales están las herraduras del caballo del apóstol Santiago, supuestamente traídas del campo de batalla de
-          las Navas de Tolosa, y una serie de arquetas de gran valor artístico.</p>
-        <p class="pt-2 text-justify">El museo de reliquias del monasterio también exhibe piezas artísticas destacadas,
-          como una talla policromada gótica de Santa Ana, la Virgen y el Niño, marfiles hispano-filipinos, y una talla
-          en
-          alabastro de Nuestra Señora del Cister. Estas piezas no solo tienen valor religioso, sino que también
-          representan importantes logros artísticos y estéticos del monasterio.</p>
+    </article>
+    <article id="relic-room">
+      <h3 class="font-semibold text-lg text-gray-400 uppercase pb-3 mt-10">Sala de las Reliquias</h3>
+      <div class="p-4 border-2 border-gray-100 rounded-md dark:border-gray-700">
+        <div>
+          <img src="./../../../assets/abadia/6.1.jpg" alt="Imagen 9"
+            class="img-right float-none sm:float-right sm:w-1/2 mt-0 sm:mt-2 py-4">
+          <p class="text-justify">Las reliquias, consideradas vestigios de épocas pasadas, incluyen partes del cuerpo
+            de santos y objetos que han tocado a estos, y han sido objeto de veneración desde la Edad Media. A lo largo
+            de
+            la historia, la Iglesia ha valorado las reliquias por su capacidad para transmitir virtud y atraer
+            peregrinos.
+            Sin embargo, a partir de las Cruzadas, el culto a las reliquias se volvió un negocio, llevando a la Iglesia
+            a
+            regular la autenticidad de las mismas con documentos llamados "auténticas", especialmente durante el
+            Concilio
+            de
+            Trento para frenar el mercadeo excesivo.</p>
+          <img src="./../../../assets/abadia/6.2.jpg" alt="Imagen 10"
+            class="img-left float-none sm:float-left sm:w-1/2 mt-1 sm:mt-5 py-4">
+          <p class="pt-2 text-justify">El monasterio de Cañas posee una extensa colección de reliquias, aunque no fue un
+            destino importante de peregrinación. Los relicarios que albergan estas reliquias, a menudo joyas de
+            orfebrería,
+            datan principalmente del siglo XVI en adelante. La colección se clasifica en cuatro periodos: medieval,
+            XV-XVII,
+            XVIII-XIX, y siglo XX, cada uno reflejando distintas fases de adquisición y autentificación. La colección
+            medieval incluye reliquias aportadas por los López de Haro y otras donaciones, mientras que las de los
+            siglos
+            XV-XVII incluyen piezas con “auténticas” documentadas.</p>
+          <p class="pt-2 text-justify">Entre las reliquias destacadas del monasterio se encuentran la canilla de Santa
+            Engracia y un hueso de los mártires de Cardeña, ambas con certificados de autenticidad. También se conserva
+            una
+            reproducción del clavo de la crucifixión, hecho para imitar al original en Roma. Entre las reliquias más
+            inusuales están las herraduras del caballo del apóstol Santiago, supuestamente traídas del campo de batalla
+            de
+            las Navas de Tolosa, y una serie de arquetas de gran valor artístico.</p>
+          <p class="pt-2 text-justify">El museo de reliquias del monasterio también exhibe piezas artísticas destacadas,
+            como una talla policromada gótica de Santa Ana, la Virgen y el Niño, marfiles hispano-filipinos, y una talla
+            en
+            alabastro de Nuestra Señora del Cister. Estas piezas no solo tienen valor religioso, sino que también
+            representan importantes logros artísticos y estéticos del monasterio.</p>
+        </div>
       </div>
-    </div>
-</article>
-  <article id="museum-storage">
-    <h3 class="font-semibold text-lg text-gray-400 uppercase pb-3 mt-10">Cilla-Museo</h3>
-    <div class="p-4 border-2 border-gray-100 rounded-md dark:border-gray-700">
-      <div>
-        <img src="./../../../assets/abadia/7.1.jpg" alt="Imagen 11"
-          class="img-right float-none sm:float-right sm:w-1/2 mt-0 sm:mt-2 py-4">
-        <p class="text-justify">El museo del monasterio ocupa el espacio de la antigua cilla y alberga la mayor parte
-          del patrimonio mueble de la abadía, con una colección que comienza en el siglo XVI, siguiendo la norma
-          cisterciense de limitar el culto a imágenes. Situado en el flanco occidental del claustro, el museo se divide
-          en
-          dos partes conectadas por arcos ojivales y está accesible desde una portada del siglo XIII. La colección se
-          organiza en cinco temas: santos cistercienses, primeros años de Cristo, la Pasión y la Redención, la Virgen, y
-          los Santos.</p>
-        <img src="./../../../assets/abadia/7.2.jpg" alt="Imagen 12"
-          class="img-left float-none sm:float-left sm:w-1/2 mt-1 sm:mt-5 py-4">
-        <p class="pt-2 text-justify">Entre las obras destacadas del museo, se encuentran tallas de madera de gran valor.
-          La “Virgen de la Ayuela”, de los siglos XII-XIII, es notable por su antigüedad y el hecho de que fue traída
-          desde el antiguo monasterio de Ayuela. La talla de “San Juan Evangelista”, del siglo XII, y la de “San Pedro”,
-          del siglo XIII, también son destacables, siendo esta última una pieza importante debido a su conservación y
-          sus
-          conexiones heráldicas. La talla gótica de “San Martín de Tours” del siglo XIV es otra pieza de interés.</p>
-        <p class="pt-2 text-justify">Los retablos expuestos incluyen el de “San Juan Bautista”, realizado por Pedro Ruiz
-          de Salazar en 1643, el retablo de “La Inmaculada” también de 1643, y el barroco de “San Benito” del siglo
-          XVII.
-          El retablo de “San Pedro” y el de “San José” presentan obras de mediados del siglo XVII y XVIII,
-          respectivamente. El retablo de “Santa Lucia”, datado a principios del siglo XVII, encierra una curiosa
-          representación de mártires cristianos, mientras que el retablo del “Calvario” muestra una notable talla de
-          Cristo crucificado.</p>
-        <p class="pt-2 text-justify">Entre las obras de temática cisterciense destacan los lienzos del siglo XVII como
-          “Desposorio místico de San Roberto” y “La Lactancia de San Bernardo”. Otros cuadros importantes incluyen “San
-          Bernardo con los instrumentos de la Pasión” y “Santa Gertrudis”, así como el sagrario barroco del siglo XVIII.
-          Además, se exhiben piezas sobresalientes como el “Tríptico de San Juan Bautista” del finales del siglo XVI, y
-          cuadros de la Escuela Riojana como “Caída de Cristo Camino de Calvario” y “La Flagelación”, así como “La
-          Trinidad”, un mediorelieve de finales del siglo XVI.</p>
+    </article>
+    <article id="museum-storage">
+      <h3 class="font-semibold text-lg text-gray-400 uppercase pb-3 mt-10">Cilla-Museo</h3>
+      <div class="p-4 border-2 border-gray-100 rounded-md dark:border-gray-700">
+        <div>
+          <img src="./../../../assets/abadia/7.1.jpg" alt="Imagen 11"
+            class="img-right float-none sm:float-right sm:w-1/2 mt-0 sm:mt-2 py-4">
+          <p class="text-justify">El museo del monasterio ocupa el espacio de la antigua cilla y alberga la mayor parte
+            del patrimonio mueble de la abadía, con una colección que comienza en el siglo XVI, siguiendo la norma
+            cisterciense de limitar el culto a imágenes. Situado en el flanco occidental del claustro, el museo se
+            divide
+            en
+            dos partes conectadas por arcos ojivales y está accesible desde una portada del siglo XIII. La colección se
+            organiza en cinco temas: santos cistercienses, primeros años de Cristo, la Pasión y la Redención, la Virgen,
+            y
+            los Santos.</p>
+          <img src="./../../../assets/abadia/7.2.jpg" alt="Imagen 12"
+            class="img-left float-none sm:float-left sm:w-1/2 mt-1 sm:mt-5 py-4">
+          <p class="pt-2 text-justify">Entre las obras destacadas del museo, se encuentran tallas de madera de gran
+            valor.
+            La “Virgen de la Ayuela”, de los siglos XII-XIII, es notable por su antigüedad y el hecho de que fue traída
+            desde el antiguo monasterio de Ayuela. La talla de “San Juan Evangelista”, del siglo XII, y la de “San
+            Pedro”,
+            del siglo XIII, también son destacables, siendo esta última una pieza importante debido a su conservación y
+            sus
+            conexiones heráldicas. La talla gótica de “San Martín de Tours” del siglo XIV es otra pieza de interés.</p>
+          <p class="pt-2 text-justify">Los retablos expuestos incluyen el de “San Juan Bautista”, realizado por Pedro
+            Ruiz
+            de Salazar en 1643, el retablo de “La Inmaculada” también de 1643, y el barroco de “San Benito” del siglo
+            XVII.
+            El retablo de “San Pedro” y el de “San José” presentan obras de mediados del siglo XVII y XVIII,
+            respectivamente. El retablo de “Santa Lucia”, datado a principios del siglo XVII, encierra una curiosa
+            representación de mártires cristianos, mientras que el retablo del “Calvario” muestra una notable talla de
+            Cristo crucificado.</p>
+          <p class="pt-2 text-justify">Entre las obras de temática cisterciense destacan los lienzos del siglo XVII como
+            “Desposorio místico de San Roberto” y “La Lactancia de San Bernardo”. Otros cuadros importantes incluyen
+            “San
+            Bernardo con los instrumentos de la Pasión” y “Santa Gertrudis”, así como el sagrario barroco del siglo
+            XVIII.
+            Además, se exhiben piezas sobresalientes como el “Tríptico de San Juan Bautista” del finales del siglo XVI,
+            y
+            cuadros de la Escuela Riojana como “Caída de Cristo Camino de Calvario” y “La Flagelación”, así como “La
+            Trinidad”, un mediorelieve de finales del siglo XVI.</p>
+        </div>
       </div>
-    </div>
-</article>
-<!--top-0-->
-<!--z-40-->
-  <aside id="default-sidebar" class="fixed mt-20 right-0 transition-transform translate-x-full lg:translate-x-0 z-40" aria-label="Sidebar">
-    <div class="fixed w-full right-0 px-7 pt-10 pb-7 sm:w-64 sm:pt-0 bg-white dark:bg-gray-800 rounded-md shadow shadow-xl sm:shadow-none">
-      <h2 class="font-medium text-gray-500 text-sm pt-3 pb-5">EN ESTE ARTÍCULO</h2>
-      <ul class="menu-lat ps-2 space-y-2 font-medium">
-        <li>
-          <a href="abbey#history"
-            class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group active"
-            aria-controls="sala-capitular" aria-selected="true">
-            <svg
-              class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
-              aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
-              viewBox="0 0 24 24">
-              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M5 19V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v13H7a2 2 0 0 0-2 2Zm0 0a2 2 0 0 0 2 2h12M9 3v14m7 0v4" />
-            </svg>
-            <span class=" ms-3">Historia</span>
-          </a>
-        </li>
-        <li>
-          <a href="abbey#church"
-            class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-            <svg
-              class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
-              aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
-              viewBox="0 0 24 24">
-              <path stroke="currentColor" stroke-linecap="round" stroke-width="2"
-                d="M3 21h18M4 18h16M6 10v8m4-8v8m4-8v8m4-8v8M4 9.5v-.955a1 1 0 0 1 .458-.84l7-4.52a1 1 0 0 1 1.084 0l7 4.52a1 1 0 0 1 .458.84V9.5a.5.5 0 0 1-.5.5h-15a.5.5 0 0 1-.5-.5Z" />
-            </svg>
-            <span class="flex-1 ms-3 whitespace-nowrap">La Iglesia</span>
-          </a>
-        </li>
-        <li>
-          <a href="abbey#cloister"
-            class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-            <svg
-              class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
-              aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
-              viewBox="0 0 24 24">
-              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M12 5v7m0 7v-7m4-7v14m3-14H8.5A3.5 3.5 0 0 0 5 8.5v0A3.5 3.5 0 0 0 8.5 12H12" />
-            </svg>
-            <span class="flex-1 ms-3 whitespace-nowrap">El Claustro</span>
-          </a>
-        </li>
-        <li>
-          <a href="abbey#chapter-room"
-            class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-            <img
-              class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
-              aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
-              viewBox="0 0 24 24" src="./../../../assets/icon/tom-icon.svg" alt="">
-            <span class="flex-1 ms-3 whitespace-nowrap">Sala Capitular</span>
-          </a>
-        </li>
-        <li>
-          <a href="abbey#relic-room"
-            class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-            <img
-              class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
-              aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
-              viewBox="0 0 24 24" src="./../../../assets/icon/relic-icon.svg" alt="">
-            <span class="flex-1 ms-3 whitespace-nowrap">Sala de Reliquias</span>
-          </a>
-        </li>
-        <li>
-          <a href="abbey#museum-storage"
-            class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-            <img
-              class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
-              aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
-              viewBox="0 0 24 24" src="./../../../assets/icon/museum-storage-icon.svg" alt="">
-            <span class="flex-1 ms-3 whitespace-nowrap">Cilla-Museo</span>
-          </a>
-        </li>
+    </article>
+  </div>
 
-      </ul>
-    </div>
-  </aside>
 
+  <!-- Contenido de la segunda columna -->
+  <div class="lg:fixed lg:right-0 lg:w-[15%] lg:mr-[5%]">
+    <aside id="default-sidebar"
+      class="fixed lg:sticky w-auto right-0 lg:right-10 mt-20 transition-transform translate-x-full lg:translate-x-0 z-40"
+      aria-label="Sidebar">
+      <div
+        class="fixed lg:sticky w-auto right-0 lg:right-10 px-7 pt-10 lg:mt-15 pb-7 sm:w-64 sm:pt-0 bg-white dark:bg-gray-800 rounded-md shadow shadow-xl sm:shadow-none">
+        <h2 class="font-medium text-gray-500 text-sm pt-3 pb-5">EN ESTE ARTÍCULO</h2>
+        <ul class="menu-lat ps-2 space-y-2 font-medium">
+          <li>
+            <a href="abbey#history"
+              class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group active"
+              aria-controls="sala-capitular" aria-selected="true">
+              <svg
+                class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M5 19V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v13H7a2 2 0 0 0-2 2Zm0 0a2 2 0 0 0 2 2h12M9 3v14m7 0v4" />
+              </svg>
+              <span class=" ms-3">Historia</span>
+            </a>
+          </li>
+          <li>
+            <a href="abbey#church"
+              class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+              <svg
+                class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-width="2"
+                  d="M3 21h18M4 18h16M6 10v8m4-8v8m4-8v8m4-8v8M4 9.5v-.955a1 1 0 0 1 .458-.84l7-4.52a1 1 0 0 1 1.084 0l7 4.52a1 1 0 0 1 .458.84V9.5a.5.5 0 0 1-.5.5h-15a.5.5 0 0 1-.5-.5Z" />
+              </svg>
+              <span class="flex-1 ms-3 whitespace-nowrap">La Iglesia</span>
+            </a>
+          </li>
+          <li>
+            <a href="abbey#cloister"
+              class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+              <svg
+                class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M12 5v7m0 7v-7m4-7v14m3-14H8.5A3.5 3.5 0 0 0 5 8.5v0A3.5 3.5 0 0 0 8.5 12H12" />
+              </svg>
+              <span class="flex-1 ms-3 whitespace-nowrap">El Claustro</span>
+            </a>
+          </li>
+          <li>
+            <a href="abbey#chapter-room"
+              class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+              <img
+                class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                viewBox="0 0 24 24" src="./../../../assets/icon/tom-icon.svg" alt="">
+              <span class="flex-1 ms-3 whitespace-nowrap">Sala Capitular</span>
+            </a>
+          </li>
+          <li>
+            <a href="abbey#relic-room"
+              class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+              <img
+                class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                viewBox="0 0 24 24" src="./../../../assets/icon/relic-icon.svg" alt="">
+              <span class="flex-1 ms-3 whitespace-nowrap">Sala de Reliquias</span>
+            </a>
+          </li>
+          <li>
+            <a href="abbey#museum-storage"
+              class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+              <img
+                class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                viewBox="0 0 24 24" src="./../../../assets/icon/museum-storage-icon.svg" alt="">
+              <span class="flex-1 ms-3 whitespace-nowrap">Cilla-Museo</span>
+            </a>
+          </li>
+
+        </ul>
+      </div>
+    </aside>
+  </div>
 </div>

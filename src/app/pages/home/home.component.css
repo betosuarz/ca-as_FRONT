@@ -9,22 +9,22 @@
   font-style: cursive;
 }
 
-@media screen and (max-width: 425px) {
+.section-sr {
+  padding: 2rem 2rem 0rem
+}
 
-  .video,
-  .section-sr {
-    padding: 5rem 2rem 0rem
-  }
+.video {
+  padding: 5rem 2rem 0rem
+}
 
-  .bg-black {
-    padding: 2rem 2rem;
-    margin: 5rem 2rem
-  }
+.bg-black {
+  padding: 2rem 2rem;
+  margin: 5rem 2rem
+}
 
-  .bg-cont {
-    padding: 4rem 2rem;
-    margin: 1rem 2rem 0rem
-  }
+.bg-cont {
+  padding: 4rem 2rem;
+  margin: 1rem 2rem 0rem
 }
 
 @media screen and (min-width: 426px) and (max-width: 767px) {

@@ -169,7 +169,7 @@ li::before {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  opacity: 70%;
+  opacity: 50%;
   z-index: -1;
 }
 
@@ -188,7 +188,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  margin-top: 30px;
+  margin-top: 50px;
   margin-bottom: 50px;
 }
 
@@ -290,11 +290,11 @@ body {
     margin-top: 15px;
   }
 
-@media (max-width: 430px) {
-  .container{
-    width: 340px;
-    margin: 7px;
-  }
+  @media (max-width: 430px) {
+    .container {
+      width: 19rem;
+      margin: 0.5rem;
+    }
 
-  } 
+  }
 }

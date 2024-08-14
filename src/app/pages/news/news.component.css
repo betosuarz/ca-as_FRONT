@@ -1,3 +1,29 @@
+.new-title {
+  padding: 3rem 2rem 1rem;
+}
+
 .new-list {
-  padding-top: 50px;
+  padding: 2rem 2rem 0;
+}
+
+.last-list {
+  margin: 0 0 5rem;
+}
+
+@media screen and (min-width: 640px) and (max-width: 1023px) {
+  .new-list {
+    padding: 2rem 5rem 0;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1400px) {
+  .new-list {
+    padding: 2rem 10rem 1rem;
+  }
+}
+
+@media screen and (min-width: 1401px) {
+  .new-list {
+    padding: 2rem 20rem 1rem;
+  }
 }

@@ -6,7 +6,7 @@ import { Component, HostListener, AfterViewInit } from '@angular/core';
   templateUrl: './abbey.component.html',
   styleUrl: './abbey.component.css'
 })
-export class AbbeyComponent  {
+export class AbbeyComponent {
 
 
   ngAfterViewInit() {
